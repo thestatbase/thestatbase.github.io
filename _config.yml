@@ -1,0 +1,26 @@
+title: The StatBase
+description: Advanced analytics for professional and collegiate sports.
+baseurl: ""
+url: "https://thestatbase.github.io"
+
+author:
+  name: Drew Schmidt
+  email: dgschmidt00@icloud.com
+
+markdown: kramdown
+highlighter: rouge
+
+sass:
+  style: compressed
+
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/
