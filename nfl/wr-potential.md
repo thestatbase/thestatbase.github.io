@@ -26,6 +26,8 @@ description: Linear regression model comparing fantasy production to WOPR to ide
 
 An explanation, definitions, examples, and limitations can be found below the chart.
 
+<div class="flourish-embed" data-src="story/3356523"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/3356523/thumbnail" width="100%" alt="visualization" /></noscript></div>
+
 ---
 
 ## The Potential Chart: Explanation, Definitions, Examples, and Limitations
