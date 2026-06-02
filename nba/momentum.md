@@ -5,13 +5,15 @@ description: A two-phase study examining whether momentum-based statistics can p
 ---
 
 <div class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">StatBase</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> Momentum &amp; Game Outcomes
+  <a href="{{ '/' | relative_url }}">Home</a> <span>/</span>
+  <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span>
+  Momentum &amp; Game Outcomes
 </div>
 
 <div class="page-header">
-  <div class="page-category nba">NBA · Predictive Modeling</div>
+  <div class="page-category nba">NBA &middot; Predictive Modeling</div>
   <h1>Momentum &amp; Game Outcomes in the NBA</h1>
-  <div class="page-meta">AP Research · 2025–26 Season · Backtesting Oct 21, 2025 – Jan 4, 2026 · Forward Testing Jan 24 – All-Star Break</div>
+  <div class="page-meta">AP Research &middot; Backtesting Oct 21, 2025 &ndash; Jan 4, 2026 &middot; Forward Testing Jan 24 &ndash; All-Star Break</div>
 </div>
 
 <div class="page-content">
@@ -26,11 +28,11 @@ description: A two-phase study examining whether momentum-based statistics can p
     <span class="stat-label">Accuracy (No Injuries)</span>
   </div>
   <div class="stat-card">
-    <span class="stat-value">r = 0.688</span>
+    <span class="stat-value">r&nbsp;=&nbsp;0.688</span>
     <span class="stat-label">SRP Correlation</span>
   </div>
   <div class="stat-card amber">
-    <span class="stat-value">n = 148</span>
+    <span class="stat-value">n&nbsp;=&nbsp;148</span>
     <span class="stat-label">Games Forward-Tested</span>
   </div>
 </div>
@@ -49,11 +51,11 @@ Box score statistics are the basic performance indicators tracked in every NBA g
 
 The backtesting phase ran from October 21 to January 4, 2026. A Python web scraper sourced statistics from ESPN's official API endpoints for every game in that window. Seven run-related statistics were then correlated against point differential to identify which held the most significance in predicting convincing wins. That process produced the first formula, srpOriginal, built directly from those correlations:
 
-(2.5 × Runs) + (0.4 × Points) − (3.0 × RunsAllowed) − (0.4 × PointsAllowed) + RunDiff
+(2.5 &times; Runs) + (0.4 &times; Points) &minus; (3.0 &times; RunsAllowed) &minus; (0.4 &times; PointsAllowed) + RunDiff
 
 Regression optimization on the backtesting data then produced the final formula, srpDominance, which identified that run differential and average run size drove the most explanatory power:
 
-(Runs × AvgSize) − (RunsAllowed × AvgSizeAllowed) + (2.0 × RunDiff)
+(Runs &times; AvgSize) &minus; (RunsAllowed &times; AvgSizeAllowed) + (2.0 &times; RunDiff)
 
 SRP refers to srpDominance throughout the rest of this page, as that is the formula used in forward testing.
 
@@ -83,10 +85,10 @@ The forward testing window ran from January 24, 2026 through the All-Star Break 
     <tr><td>Avg Winner SRP</td><td>Overall</td><td>14.17</td><td>148</td></tr>
     <tr><td>Avg Score Differential</td><td>Correct Predictions</td><td>23.17</td><td>101</td></tr>
     <tr><td>Avg Score Differential</td><td>Incorrect Predictions</td><td>20.43</td><td>47</td></tr>
-    <tr><td>Correlation (Backtest)</td><td>SRP vs Point Diff</td><td>r = 0.752</td><td>—</td></tr>
-    <tr><td>R² (Backtest)</td><td>SRP vs Point Diff</td><td>0.566</td><td>—</td></tr>
-    <tr><td>Correlation (Forward Test)</td><td>SRP vs Point Diff</td><td class="pos">r = 0.688</td><td>—</td></tr>
-    <tr><td>R² (Forward Test)</td><td>SRP vs Point Diff</td><td>0.477</td><td>—</td></tr>
+    <tr><td>Correlation (Backtest)</td><td>SRP vs Point Diff</td><td>r = 0.752</td><td>&mdash;</td></tr>
+    <tr><td>R&sup2; (Backtest)</td><td>SRP vs Point Diff</td><td>0.566</td><td>&mdash;</td></tr>
+    <tr><td>Correlation (Forward Test)</td><td>SRP vs Point Diff</td><td class="pos">r = 0.688</td><td>&mdash;</td></tr>
+    <tr><td>R&sup2; (Forward Test)</td><td>SRP vs Point Diff</td><td>0.477</td><td>&mdash;</td></tr>
   </tbody>
 </table>
 </div>

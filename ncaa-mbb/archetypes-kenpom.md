@@ -5,13 +5,13 @@ description: A multiple regression analysis of all D1 teams examining how the ar
 ---
 
 <div class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">StatBase</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> Archetypes &amp; KenPom
+  <a href="{{ '/' | relative_url }}">Home</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> Archetypes &amp; KenPom
 </div>
 
 <div class="page-header">
-  <div class="page-category ncaa">NCAA Men's Basketball · Team Construction</div>
+  <div class="page-category ncaa">NCAA Men&rsquo;s Basketball &middot; Team Construction</div>
   <h1>Player Archetypes &amp; KenPom Ratings</h1>
-  <div class="page-meta">2025–26 Season · All D1 Teams · Multiple Regression Analysis</div>
+  <div class="page-meta">2025&ndash;26 Season &middot; All D1 Teams &middot; Multiple Regression Analysis</div>
 </div>
 
 <div class="page-content">

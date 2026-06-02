@@ -5,13 +5,13 @@ description: An in-depth data science study of NCAA D1 Men's Basketball using Ke
 ---
 
 <div class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">StatBase</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> March Madness Trends
+  <a href="{{ '/' | relative_url }}">Home</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> March Madness Trends
 </div>
 
 <div class="page-header">
-  <div class="page-category ncaa">NCAA Men's Basketball · March Madness</div>
+  <div class="page-category ncaa">NCAA Men&rsquo;s Basketball &middot; March Madness</div>
   <h1>March Madness Trends (2002–2026)</h1>
-  <div class="page-meta">24 Seasons · 364 Teams Analyzed · 1,535 Tournament Appearances · Based on KenPom Metrics</div>
+  <div class="page-meta">24 Seasons &middot; 364 Teams Analyzed &middot; 1,535 Tournament Appearances &middot; Based on KenPom Metrics</div>
 </div>
 
 <div class="page-content">

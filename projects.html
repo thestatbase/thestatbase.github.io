@@ -1,95 +1,107 @@
 ---
 layout: default
 title: All Projects
+description: All StatBase research projects, sorted by sport — NFL, NBA, and NCAA Men's Basketball.
 ---
 
-<div class="page-header">
-  <div class="page-category">StatBase</div>
-  <h1>All Projects</h1>
-  <div class="page-meta">NFL · NBA · NCAA Men's Basketball</div>
+<!-- PROJECTS HERO -->
+<section class="projects-hero">
+  <div class="projects-hero-inner">
+    <p class="projects-eyebrow">The StatBase</p>
+    <h1>All Projects</h1>
+    <p class="projects-hero-sub">NFL &middot; NBA &middot; NCAA Men's Basketball &mdash; 9 projects</p>
+  </div>
+</section>
+
+<!-- NFL -->
+<div class="sport-section-header nfl">
+  <div class="ssh-inner">
+    <span class="ssh-name">NFL</span>
+    <span class="ssh-count">2 Projects</span>
+  </div>
+</div>
+<div class="sport-section-cards">
+  <div class="ssc-inner">
+
+    <a class="proj-card" href="{{ '/nfl/wr-potential/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">WR Potential Chart</div>
+      <div class="proj-card-desc">Linear regression model comparing fantasy production to WOPR to identify wide receivers likely to outperform their current average. 2025&ndash;26 season. Data from nflverse.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/nfl/rb-potential/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">RB Potential Chart</div>
+      <div class="proj-card-desc">The same residual-based framework applied to running backs using a Volume Per Game Index that accounts for carries, targets, and air yards. 2025&ndash;26 season.</div>
+    </a>
+
+  </div>
 </div>
 
-<div class="projects-index">
-
-  <div class="sport-group">
-    <div class="sport-label">NFL</div>
-    <div class="project-list">
-      <a class="project-item" href="{{ '/nfl/wr-potential/' | relative_url }}">
-        <div>
-          <div class="project-title">WR Potential Chart</div>
-          <div class="project-desc">Linear regression model comparing fantasy production to WOPR, 2025–26 season.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/nfl/rb-potential/' | relative_url }}">
-        <div>
-          <div class="project-title">RB Potential Chart</div>
-          <div class="project-desc">Residual-based potential framework applied to running backs using a volume index, 2025–26 season.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-    </div>
+<!-- NBA -->
+<div class="sport-section-header nba">
+  <div class="ssh-inner">
+    <span class="ssh-name">NBA</span>
+    <span class="ssh-count">1 Project</span>
   </div>
+</div>
+<div class="sport-section-cards alt">
+  <div class="ssc-inner">
 
-  <div class="sport-group">
-    <div class="sport-label">NBA</div>
-    <div class="project-list">
-      <a class="project-item" href="{{ '/nba/momentum/' | relative_url }}">
-        <div>
-          <div class="project-title">Momentum &amp; Game Outcomes</div>
-          <div class="project-desc">AP Research study: can momentum-based statistics predict NBA game outcomes? 68.2% accuracy over 148 forward-tested games.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-    </div>
+    <a class="proj-card" href="{{ '/nba/momentum/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">Momentum &amp; Game Outcomes</div>
+      <div class="proj-card-desc">AP Research study: can momentum-based statistics predict NBA game outcomes? Two-phase backtesting and forward-testing study using a novel Scoring Run Performance metric. 68.2% accuracy over 148 games.</div>
+    </a>
+
   </div>
+</div>
 
-  <div class="sport-group">
-    <div class="sport-label">NCAA Men's Basketball</div>
-    <div class="project-list">
-      <a class="project-item" href="{{ '/ncaa-mbb/up-down-up-transfers/' | relative_url }}">
-        <div>
-          <div class="project-title">Up-Down-Up Transfer Analysis</div>
-          <div class="project-desc">503 players, 2020–26. Three-phase path analysis: original good school → weaker program → return to competitive level.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}">
-        <div>
-          <div class="project-title">D2-to-D1 Transfer Analysis</div>
-          <div class="project-desc">566 players, 2020–26. How production translates — or doesn't — when players make the jump from Division II to Division I.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">
-        <div>
-          <div class="project-title">Translatability Index (TI)</div>
-          <div class="project-desc">Full methodology for the 0–100 composite score used to rank transfer candidates by likelihood of holding their production at the next level.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/ncaa-mbb/momentum-cbb/' | relative_url }}">
-        <div>
-          <div class="project-title">Momentum &amp; CBB Power Ratings (MA-NetRtg)</div>
-          <div class="project-desc">Five-source momentum-adjusted rating system: KenPom AdjEM + EvanMiya head-to-head + SOS + kill shots + roster quality.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/ncaa-mbb/archetypes-kenpom/' | relative_url }}">
-        <div>
-          <div class="project-title">Archetypes &amp; KenPom Ratings</div>
-          <div class="project-desc">Multiple regression analysis linking player archetype composition to team KenPom rating across all D1 teams, 2025–26 season.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-      <a class="project-item" href="{{ '/ncaa-mbb/march-madness-trends/' | relative_url }}">
-        <div>
-          <div class="project-title">March Madness Trends (2002–2026)</div>
-          <div class="project-desc">24 seasons of KenPom data. Seeding, upsets, conference dominance, ML feature importance, coaching longevity, and the 2026 field outlook.</div>
-        </div>
-        <div class="project-arrow">→</div>
-      </a>
-    </div>
+<!-- NCAA MBB -->
+<div class="sport-section-header ncaa">
+  <div class="ssh-inner">
+    <span class="ssh-name">NCAA Men&rsquo;s Basketball</span>
+    <span class="ssh-count">6 Projects</span>
   </div>
+</div>
+<div class="sport-section-cards">
+  <div class="ssc-inner">
 
+    <a class="proj-card" href="{{ '/ncaa-mbb/up-down-up-transfers/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">Up-Down-Up Transfer Analysis</div>
+      <div class="proj-card-desc">503 players, 2020&ndash;26. Three-phase path analysis: competitive program &rarr; weaker school &rarr; return to competitive level. Only 45.3% meet the success threshold. System fit matters nearly as much as player quality.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">D2-to-D1 Transfer Analysis</div>
+      <div class="proj-card-desc">566 players, 2020&ndash;26. The D2-to-D1 jump is harder than assumed &mdash; only 17.0% maintain relative production. WS/40 (r = 0.386) is the best single predictor. The profile of a player who translates is identifiable.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">Translatability Index (TI)</div>
+      <div class="proj-card-desc">Full methodology for the 0&ndash;100 composite score used across both transfer analyses. Five components: Efficiency, Jump Risk, System Fit, Trajectory, and Volume Appropriateness. Includes an explanation of the paradox in the success-rate-by-tier chart.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/ncaa-mbb/momentum-cbb/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">Momentum &amp; CBB Power Ratings</div>
+      <div class="proj-card-desc">MA-NetRtg: a five-source momentum-adjusted power rating blending KenPom AdjEM, EvanMiya head-to-head data, schedule strength, kill shots, and roster quality. 10-fold CV R&sup2; = 0.984. Top 75 KenPom teams.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/ncaa-mbb/archetypes-kenpom/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">Archetypes &amp; KenPom Ratings</div>
+      <div class="proj-card-desc">Multiple regression analysis of all D1 teams: how strongly does archetype composition of a team&rsquo;s best players predict KenPom rating? r = 0.72 for best player vs. team KenPom. 2025&ndash;26 season.</div>
+    </a>
+
+    <a class="proj-card" href="{{ '/ncaa-mbb/march-madness-trends/' | relative_url }}">
+      <span class="proj-card-arrow">&#8594;</span>
+      <div class="proj-card-title">March Madness Trends (2002&ndash;2026)</div>
+      <div class="proj-card-desc">24 seasons of KenPom data. Seeding patterns, upset rates, conference dominance, ML feature importance (AUC = 0.756), coaching longevity, and the 2026 tournament field outlook.</div>
+    </a>
+
+  </div>
 </div>

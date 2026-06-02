@@ -5,13 +5,15 @@ description: 503 players, 2020-26. A three-phase analysis of players who transfe
 ---
 
 <div class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">StatBase</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> Up-Down-Up Transfers
+  <a href="{{ '/' | relative_url }}">Home</a> <span>/</span>
+  <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span>
+  Up-Down-Up Transfers
 </div>
 
 <div class="page-header">
-  <div class="page-category ncaa">NCAA Men's Basketball · Transfer Analysis</div>
+  <div class="page-category ncaa">NCAA Men's Basketball &middot; Transfer Analysis</div>
   <h1>Up-Down-Up Transfer Analysis</h1>
-  <div class="page-meta">503 Players · 2020–21 thru 2025–26 · D1 + D2 · All stats per 40 minutes</div>
+  <div class="page-meta">503 Players &middot; 2020&ndash;21 thru 2025&ndash;26 &middot; D1 + D2 &middot; All stats per 40 minutes</div>
 </div>
 
 <div class="page-content">
@@ -26,12 +28,12 @@ description: 503 players, 2020-26. A three-phase analysis of players who transfe
     <span class="stat-label">Phase 3 Success Rate</span>
   </div>
   <div class="stat-card">
-    <span class="stat-value">r = 0.449</span>
-    <span class="stat-label">Best Single Predictor (WARP/40)</span>
+    <span class="stat-value">r&nbsp;=&nbsp;0.449</span>
+    <span class="stat-label">Best Predictor (WARP/40)</span>
   </div>
   <div class="stat-card amber">
-    <span class="stat-value">r = 0.245</span>
-    <span class="stat-label">Best Trajectory Predictor (ΔAST/40)</span>
+    <span class="stat-value">r&nbsp;=&nbsp;0.245</span>
+    <span class="stat-label">Best Trajectory (&Delta;AST/40)</span>
   </div>
 </div>
 
@@ -45,7 +47,7 @@ Phase 1 is the original competitive program, Phase 2 is the weaker or D2 school,
 
 ## The Translatability Index (TI)
 
-A composite 0-100 score was built to quantify the likelihood of Phase 3 success. The full methodology, including components, weights, and an explanation of the paradox in the success-rate-by-tier chart, is detailed on the <a href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">Translatability Index page</a>. The TI shows a correlation of r = 0.375 (p less than 0.001) against Phase 3 WARP/40, and r = -0.308 against binary success. The negative correlation with binary success is not a flaw in the index but rather a consequence of how the relative success bar interacts with each player's Phase 2 baseline, as players with higher TI scores also faced a higher threshold to clear.
+A composite 0&ndash;100 score was built to quantify the likelihood of Phase 3 success. The full methodology, including components, weights, and an explanation of the paradox in the success-rate-by-tier chart, is detailed on the <a href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">Translatability Index page</a>. The TI shows a correlation of r = 0.375 (p less than 0.001) against Phase 3 WARP/40, and r = &minus;0.308 against binary success. The negative correlation with binary success is not a flaw in the index but rather a consequence of how the relative success bar interacts with each player's Phase 2 baseline, as players with higher TI scores also faced a higher threshold to clear.
 
 ## Dataset Overview
 
@@ -63,7 +65,7 @@ Phase 1 versus Phase 3 differentials are also smaller than expected. Phase 1 num
 
 ## Freshman to Sophomore at the Down School
 
-161 of the 503 players had two or more seasons at the down school, and the year-over-year statistical changes in those seasons are among the best predictors of Phase 3 outcomes in the entire dataset. ΔAST/40 is the single best predictor of Phase 3 WARP/40 in this group (r = 0.245, p less than 0.01), ahead of scoring, efficiency, and every other metric tested. A player who becomes a meaningfully better playmaker in Year 2 at a weak school is developing a real skill rather than exploiting bad defenders. Please note that this finding is likely partially skewed by the high proportion of point guards in this dataset, as assists are considerably more meaningful for primary ball handlers than for other position archetypes.
+161 of the 503 players had two or more seasons at the down school, and the year-over-year statistical changes in those seasons are among the best predictors of Phase 3 outcomes in the entire dataset. &Delta;AST/40 is the single best predictor of Phase 3 WARP/40 in this group (r = 0.245, p less than 0.01), ahead of scoring, efficiency, and every other metric tested. A player who becomes a meaningfully better playmaker in Year 2 at a weak school is developing a real skill rather than exploiting bad defenders. Please note that this finding is likely partially skewed by the high proportion of point guards in this dataset, as assists are considerably more meaningful for primary ball handlers than for other position archetypes.
 
 Players who improved both AST/40 and TS% from Year 1 to Year 2 showed meaningfully higher Phase 3 WARP/40 than those who improved only one or neither, and the gap is large enough to function as a real scouting filter. Two positives together signal genuine development rather than circumstance.
 

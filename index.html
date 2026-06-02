@@ -3,74 +3,45 @@ layout: default
 title: Home
 ---
 
-<div class="home-hero">
-  <div class="hero-eyebrow">Welcome to the StatBase</div>
-  <h1>Advanced analytics for professional and collegiate sports.</h1>
-  <p>Every project here starts with a real question and ends with a data-driven answer. No filler, no fluff — just methodology, findings, and honest limitations.</p>
-</div>
-
-<div class="home-sections">
-  <div class="home-section-label">Projects by sport</div>
-
-  <div class="section-grid">
-
-    <a class="section-card" href="{{ '/nfl/wr-potential/' | relative_url }}">
-      <div class="card-sport">NFL</div>
-      <div class="card-title">WR Potential Chart</div>
-      <div class="card-desc">Linear regression model comparing fantasy production to WOPR to identify wide receivers likely to outperform their current average. 2025–26 season.</div>
+<!-- HERO -->
+<section class="home-hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">The StatBase &mdash; Drew Schmidt</p>
+    <h1>Advanced analytics for professional&nbsp;&amp;&nbsp;collegiate sports.</h1>
+    <p class="hero-sub">Every project starts with a real question and ends with a data-driven answer. Methodology, findings, and honest limitations &mdash; no filler.</p>
+    <a href="{{ '/projects/' | relative_url }}" class="hero-cta">
+      Browse Projects <span class="hero-cta-arrow">&#8594;</span>
     </a>
-
-    <a class="section-card" href="{{ '/nfl/rb-potential/' | relative_url }}">
-      <div class="card-sport">NFL</div>
-      <div class="card-title">RB Potential Chart</div>
-      <div class="card-desc">The same residual-based framework applied to running backs using a volume index that properly accounts for fantasy value in volume-driven statistics.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/nba/momentum/' | relative_url }}">
-      <div class="card-sport nba">NBA</div>
-      <div class="card-title">Momentum &amp; Game Outcomes</div>
-      <div class="card-desc">Can momentum-based statistics predict NBA game outcomes? A two-phase backtesting and forward-testing study using a novel Scoring Run Performance metric — 68.2% accuracy across 148 games.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/up-down-up-transfers/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">Up-Down-Up Transfer Analysis</div>
-      <div class="card-desc">503 players, 2020–26. What actually happens when a player drops down to a weaker program and then returns to a competitive one? Only 45.3% clear the success bar.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">D2-to-D1 Transfer Analysis</div>
-      <div class="card-desc">566 players, 2020–26. The D2-to-D1 jump is harder than it looks. Only 17.0% maintain relative production — but the profile of a player who translates is identifiable.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">Translatability Index</div>
-      <div class="card-desc">A composite 0–100 score built to quantify how likely a transfer is to hold their production at the next level. Covers methodology, components, and the paradox in the success-rate-by-tier chart.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/momentum-cbb/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">Momentum &amp; CBB Power Ratings</div>
-      <div class="card-desc">MA-NetRtg: a five-source momentum-adjusted power rating that blends KenPom AdjEM, EvanMiya head-to-head data, schedule strength, kill shots, and roster quality into a single number.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/archetypes-kenpom/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">Archetypes &amp; KenPom Ratings</div>
-      <div class="card-desc">How strongly does the archetype composition of a team's best players predict KenPom rating? A multiple regression analysis of all D1 teams using this past season's data.</div>
-    </a>
-
-    <a class="section-card" href="{{ '/ncaa-mbb/march-madness-trends/' | relative_url }}">
-      <div class="card-sport ncaa">NCAA MBB</div>
-      <div class="card-title">March Madness Trends (2002–2026)</div>
-      <div class="card-desc">24 seasons of KenPom data. Seeding patterns, upset rates, conference dominance, ML feature importance, coaching longevity, and the 2026 tournament outlook.</div>
-    </a>
-
   </div>
+</section>
 
-  <div class="home-contact">
-    Questions or feedback? Reach me at <a href="mailto:dgschmidt00@icloud.com">dgschmidt00@icloud.com</a>
+<!-- STAT STRIP -->
+<section class="home-stats">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <span class="stat-num blue">9</span>
+      <span class="stat-label-main">Research Projects</span>
+      <span class="stat-label-sub">NFL &middot; NBA &middot; NCAA MBB</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num green">1,069</span>
+      <span class="stat-label-main">Transfer Players Tracked</span>
+      <span class="stat-label-sub">503 Up-Down-Up &middot; 566 D2-to-D1</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num amber">68.2%</span>
+      <span class="stat-label-main">NBA Prediction Accuracy</span>
+      <span class="stat-label-sub">148 Forward-Tested Games</span>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="home-about">
+  <div class="about-inner">
+    <p class="about-copy">
+      Original research built from public data — nflverse, ESPN APIs, KenPom, EvanMiya. Each project is independently reproducible and includes full methodology, limitations, and raw findings.
+    </p>
+    <a href="{{ '/projects/' | relative_url }}" class="about-cta">View All Projects &#8594;</a>
+  </div>
+</section>

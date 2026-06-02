@@ -3,70 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} · The StatBase{% else %}The StatBase{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Advanced analytics for professional and collegiate sports.{% endif %}">
+  <title>{% if page.title %}{{ page.title }} · The StatBase{% else %}The StatBase — Advanced Sports Analytics{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Advanced analytics for professional and collegiate sports. NFL, NBA, and NCAA research by Drew Schmidt.{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
 
-<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+<!-- TOP NAV -->
+<header class="top-nav">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-brand">The StatBase</a>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main">
+      <a href="{{ '/' | relative_url }}" class="nav-home-link{% if page.url == '/' %} active{% endif %}">Home</a>
+      <a href="{{ '/projects/' | relative_url }}" class="nav-projects-btn{% if page.url == '/projects/' %} active{% endif %}">Projects</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-<div class="site-wrapper">
+<!-- PAGE CONTENT -->
+<main class="site-main" id="main-content">
+  {{ content }}
+</main>
 
-  <nav class="site-nav" id="siteNav">
-    <div class="nav-brand">
-      <a href="{{ '/' | relative_url }}" style="text-decoration:none;">
-        <span class="brand-name">The StatBase</span>
-      </a>
-      <span class="brand-tagline">Advanced Sports Analytics</span>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-brand">The StatBase</span>
+      <span class="footer-tagline">Advanced Sports Analytics</span>
     </div>
-
-    <div class="nav-section">
-      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
-      <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url == '/projects/' %} active{% endif %}">All Projects</a>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-section-label">NFL</div>
-      <a href="{{ '/nfl/wr-potential/' | relative_url }}" class="nav-link{% if page.url contains 'wr-potential' %} active{% endif %}">WR Potential</a>
-      <a href="{{ '/nfl/rb-potential/' | relative_url }}" class="nav-link{% if page.url contains 'rb-potential' %} active{% endif %}">RB Potential</a>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-section-label">NBA</div>
-      <a href="{{ '/nba/momentum/' | relative_url }}" class="nav-link{% if page.url contains '/nba/momentum' %} active{% endif %}">Momentum &amp; Game Outcomes</a>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-section-label">NCAA Men's Basketball</div>
-      <a href="{{ '/ncaa-mbb/up-down-up-transfers/' | relative_url }}" class="nav-link{% if page.url contains 'up-down-up' %} active{% endif %}">Up-Down-Up Transfers</a>
-      <a href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}" class="nav-link{% if page.url contains 'd2-to-d1' %} active{% endif %}">D2-to-D1 Transfers</a>
-      <a href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}" class="nav-link{% if page.url contains 'translatability' %} active{% endif %}">Translatability Index</a>
-      <a href="{{ '/ncaa-mbb/momentum-cbb/' | relative_url }}" class="nav-link{% if page.url contains 'momentum-cbb' %} active{% endif %}">Momentum &amp; Power Ratings</a>
-      <a href="{{ '/ncaa-mbb/archetypes-kenpom/' | relative_url }}" class="nav-link{% if page.url contains 'archetypes-kenpom' %} active{% endif %}">Archetypes &amp; KenPom</a>
-      <a href="{{ '/ncaa-mbb/march-madness-trends/' | relative_url }}" class="nav-link{% if page.url contains 'march-madness-trends' %} active{% endif %}">March Madness Trends</a>
-    </div>
-
-    <div class="nav-footer">
-      <a href="mailto:dgschmidt00@icloud.com">dgschmidt00@icloud.com</a>
-    </div>
-  </nav>
-
-  <main class="site-main">
-    {{ content }}
-  </main>
-
-</div>
+    <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+  </div>
+</footer>
 
 <script>
-  const toggle = document.getElementById('navToggle');
-  const nav    = document.getElementById('siteNav');
-  toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-      nav.classList.remove('open');
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!links.contains(e.target) && !toggle.contains(e.target)) {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
 </script>

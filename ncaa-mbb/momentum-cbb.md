@@ -5,13 +5,15 @@ description: MA-NetRtg is a five-source momentum-adjusted power rating for colle
 ---
 
 <div class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">StatBase</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> Momentum &amp; Power Ratings
+  <a href="{{ '/' | relative_url }}">Home</a> <span>/</span>
+  <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span>
+  Momentum &amp; Power Ratings
 </div>
 
 <div class="page-header">
-  <div class="page-category ncaa">NCAA Men's Basketball · Power Ratings</div>
+  <div class="page-category ncaa">NCAA Men's Basketball &middot; Power Ratings</div>
   <h1>Momentum &amp; CBB Power Ratings</h1>
-  <div class="page-meta">MA-NetRtg · Top 75 KenPom Teams · Data: EvanMiya + KenPom · 10-fold CV R² = 0.984</div>
+  <div class="page-meta">MA-NetRtg &middot; Top 75 KenPom Teams &middot; Data: EvanMiya + KenPom &middot; 10-fold CV R&sup2; = 0.984</div>
 </div>
 
 <div class="page-content">
@@ -19,14 +21,14 @@ description: MA-NetRtg is a five-source momentum-adjusted power rating for colle
 <div class="stat-row">
   <div class="stat-card">
     <span class="stat-value">0.984</span>
-    <span class="stat-label">10-Fold CV R²</span>
+    <span class="stat-label">10-Fold CV R&sup2;</span>
   </div>
   <div class="stat-card amber">
     <span class="stat-value">0.973</span>
-    <span class="stat-label">Rank ρ vs EvanMiya (Top 75)</span>
+    <span class="stat-label">Rank &rho; vs EvanMiya (Top 75)</span>
   </div>
   <div class="stat-card">
-    <span class="stat-value">±2.4</span>
+    <span class="stat-value">&plusmn;2.4</span>
     <span class="stat-label">Adj Range (AdjEM pts)</span>
   </div>
   <div class="stat-card amber">
@@ -43,7 +45,7 @@ MA-NetRtg blends five sources, each normalized to the AdjEM scale before being c
 
 ## The Formula
 
-MA-NetRtg = 0.40 × NetRtg + 0.35 × Relative Rating + 0.15 × SOS NetRtg + 0.08 × Kill Shots + 0.02 × Roster Score
+MA-NetRtg = 0.40 &times; NetRtg + 0.35 &times; Relative Rating + 0.15 &times; SOS NetRtg + 0.08 &times; Kill Shots + 0.02 &times; Roster Score
 
 <figure class="chart-figure">
   <img src="{{ '/assets/images/ma-netrtg-formula.png' | relative_url }}" alt="MA-NetRtg formula weight distribution showing five components and their weights">
@@ -64,19 +66,19 @@ MA-NetRtg = 0.40 × NetRtg + 0.35 × Relative Rating + 0.15 × SOS NetRtg + 0.08
 
 ## Top 20 Momentum-Adjusted Power Rankings
 
-<figure class="chart-figure">
+<figure class="chart-figure portrait">
   <img src="{{ '/assets/images/top20-rankings.png' | relative_url }}" alt="Top 20 Momentum-Adjusted Power Rankings table">
-  <figcaption>Top 20 Momentum-Adjusted Power Rankings. MA-NetRtg = 0.40×NetRtg + 0.35×RelRtg + 0.15×SOS + 0.08×KillShots + 0.02×Roster. Data: EvanMiya + KenPom, Top-75 KenPom teams.</figcaption>
+  <figcaption>Top 20 Momentum-Adjusted Power Rankings. MA-NetRtg = 0.40&times;NetRtg + 0.35&times;RelRtg + 0.15&times;SOS + 0.08&times;KillShots + 0.02&times;Roster. Data: EvanMiya + KenPom, Top-75 KenPom teams.</figcaption>
 </figure>
 
-Michigan ranks first with an MA-NetRtg of 38.849, driven by a momentum adjustment of +1.259 that pushes them above Duke (37.918, -0.982) despite Duke holding a higher raw AdjEM (+38.90 versus +37.59). Arizona drops from second to third on the same dynamic, as a negative momentum adjustment of -0.835 reflects recent performance below what their season-long rating would suggest.
+Michigan ranks first with an MA-NetRtg of 38.849, driven by a momentum adjustment of +1.259 that pushes them above Duke (37.918, &minus;0.982) despite Duke holding a higher raw AdjEM (+38.90 versus +37.59). Arizona drops from second to third on the same dynamic, as a negative momentum adjustment of &minus;0.835 reflects recent performance below what their season-long rating would suggest.
 
 Among the most notable rank changes, Vanderbilt rises three spots from KenPom rank 12 to MA rank 9, and St. John's rises four spots from KenPom rank 17 to MA rank 13, with both teams carrying strong positive momentum adjustments that reflect current form above their season-long averages. Wisconsin's +1.415 momentum adjustment, the largest in the top 20, pushes them into the rankings despite a relatively modest raw AdjEM. Nebraska falls four spots from KenPom rank 14 to MA rank 18, and Gonzaga falls two spots from KenPom rank 10 to MA rank 12, with both teams carrying negative adjustments indicating recent performance below their season-long norms.
 
 ## Momentum Decomposition: Top 20 Teams
 
 <figure class="chart-figure">
-  <img src="{{ '/assets/images/momentum-decomp.png' | relative_url }}" alt="Stacked bar chart showing the signed contribution of each MA-NetRtg component for the top 20 teams, with a dashed line tracking net momentum adjustment">
+  <img src="{{ '/assets/images/momentum-decomp.png' | relative_url }}" alt="Stacked bar chart showing the signed contribution of each MA-NetRtg component for the top 20 teams">
   <figcaption>Momentum Adjustment Decomposition, Top 20. Signed contribution of each formula component. Line = net adjustment. Data: EvanMiya + KenPom, Top-75 KenPom teams.</figcaption>
 </figure>
 
@@ -88,6 +90,6 @@ Relative Rating dominates the total bar height for virtually every team, confirm
 
 MA-NetRtg is most useful for identifying which high-AdjEM teams are currently playing above their season-long average (positive momentum adjustment) and which high-AdjEM teams may be more vulnerable than their raw rating suggests (negative momentum adjustment). It is not designed to replace KenPom but rather to layer current-form information on top of the season-long foundation that KenPom provides.
 
-A team with a large positive momentum adjustment is one whose recent results, head-to-head performance, and kill shot margin suggest they are playing above their average. A team with a large negative adjustment is one where the opposite is true. The adjustment range in this dataset is approximately -1.93 to +2.45 AdjEM points, which is a meaningful margin in a conference-era environment where 1-2 AdjEM points can separate tournament seedings.
+A team with a large positive momentum adjustment is one whose recent results, head-to-head performance, and kill shot margin suggest they are playing above their average. A team with a large negative adjustment is one where the opposite is true. The adjustment range in this dataset is approximately &minus;1.93 to +2.45 AdjEM points, which is a meaningful margin in a conference-era environment where 1&ndash;2 AdjEM points can separate tournament seedings.
 
 </div>
