@@ -16,7 +16,7 @@ description: An in-depth data science study of NCAA D1 Men's Basketball using Ke
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">

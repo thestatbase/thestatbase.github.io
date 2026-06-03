@@ -18,7 +18,7 @@ description: 566 players, 2020-26. A rigorous look at what happens to production
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">

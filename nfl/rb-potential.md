@@ -18,7 +18,7 @@ description: Residual-based potential framework applied to running backs using a
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="callout">
   Best viewed on a large screen. Viewing on smaller displays may lead to distortion in the charts.

@@ -23,7 +23,7 @@ description: Full methodology for the 0-100 composite score used across the Up-D
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 ## What the TI Is
 

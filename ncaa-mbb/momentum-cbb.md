@@ -18,7 +18,7 @@ description: MA-NetRtg is a five-source momentum-adjusted power rating for colle
   </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">
