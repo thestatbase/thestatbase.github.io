@@ -11,6 +11,7 @@ description: Full methodology for the 0-100 composite score used across the Up-D
 </div>
 
 <div class="page-header">
+  <div class="page-header-inner">
   <div class="page-category ncaa">NCAA Men's Basketball &middot; Methodology</div>
   <h1>Translatability Index (TI)</h1>
   <div class="page-meta">
@@ -19,9 +20,10 @@ description: Full methodology for the 0-100 composite score used across the Up-D
     &middot;
     <a href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}">D2-to-D1 Transfers</a>
   </div>
+  </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 ## What the TI Is
 

@@ -9,12 +9,14 @@ description: A multiple regression analysis of all D1 teams examining how the ar
 </div>
 
 <div class="page-header">
+  <div class="page-header-inner">
   <div class="page-category ncaa">NCAA Men&rsquo;s Basketball &middot; Team Construction</div>
   <h1>Player Archetypes &amp; KenPom Ratings</h1>
   <div class="page-meta">2025&ndash;26 Season &middot; All D1 Teams &middot; Multiple Regression Analysis</div>
+  </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">

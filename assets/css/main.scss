@@ -30,7 +30,7 @@
   --dark:           #111827;
 
   --page-max:  1120px;
-  --prose-max:  760px;
+  --prose-max:  747px;   /* exactly 2/3 of page-max */
   --radius:       6px;
   --radius-lg:    8px;
 }
@@ -45,6 +45,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  letter-spacing: -0.003em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,6 +93,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
+  letter-spacing: 0;
   transition: color 0.15s;
 }
 .nav-home-link:hover,
@@ -106,7 +108,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -172,7 +174,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.6rem;
   color: rgba(255,255,255,0.35);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   font-weight: 600;
 }
 .footer-email {
@@ -225,7 +227,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-eyebrow {
   font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.16em;
   color: rgba(255,255,255,0.55);
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -246,6 +248,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.65;
   margin-bottom: 2.5rem;
   font-weight: 400;
+  letter-spacing: 0;
 }
 .hero-cta {
   display: inline-flex;
@@ -258,7 +261,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 800;
   font-size: 0.82rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.09em;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -316,7 +319,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-dim);
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 /* =====================================================
@@ -354,7 +357,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
   white-space: nowrap;
   text-decoration: none;
   transition: all 0.2s;
@@ -406,7 +409,7 @@ img { max-width: 100%; height: auto; display: block; }
 .projects-eyebrow {
   font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.14em;
   color: rgba(255,255,255,0.35);
   font-weight: 700;
   margin-bottom: 0.7rem;
@@ -423,6 +426,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.9rem;
   color: rgba(255,255,255,0.45);
   font-weight: 500;
+  letter-spacing: 0;
 }
 
 /* =====================================================
@@ -447,7 +451,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   color: rgba(255,255,255,0.9);
 }
 .sport-section-header.ncaa .ssh-name { color: rgba(0,0,0,0.65); }
@@ -455,7 +459,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.62rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: rgba(255,255,255,0.5);
 }
 .sport-section-header.ncaa .ssh-count { color: rgba(0,0,0,0.4); }
@@ -515,6 +519,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.81rem;
   color: var(--text-muted);
   line-height: 1.55;
+  letter-spacing: 0;
 }
 
 /* =====================================================
@@ -528,7 +533,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   color: var(--text-dim);
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
 }
 .breadcrumb a { color: var(--text-dim); text-decoration: none; }
 .breadcrumb a:hover { color: var(--primary); text-decoration: none; }
@@ -569,11 +574,19 @@ img { max-width: 100%; height: auto; display: block; }
   transform: rotate(45deg);
   pointer-events: none;
 }
+
+/* inner centering wrapper for article headers */
+.page-header-inner {
+  max-width: calc(var(--prose-max) + 4rem);
+  margin: 0 auto;
+  position: relative;
+}
+
 .page-category {
   display: inline-block;
   font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: #fff;
   background: var(--primary);
   padding: 0.28rem 0.75rem;
@@ -591,7 +604,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: var(--text);
-  max-width: 800px;
+  max-width: var(--prose-max);
   margin-bottom: 0.65rem;
   position: relative;
 }
@@ -600,18 +613,20 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-dim);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   position: relative;
 }
 .page-meta a { color: var(--text-dim); font-weight: 700; }
 .page-meta a:hover { color: var(--primary); }
 
 /* =====================================================
-   ARTICLE — PAGE CONTENT
+   ARTICLE — PAGE CONTENT (centered, 2/3 of page)
    ===================================================== */
 .page-content {
   padding: 2.5rem 2rem 5rem;
   max-width: calc(var(--prose-max) + 4rem);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .page-content h2 {
@@ -622,7 +637,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding-bottom: 0.55rem;
   border-bottom: 2px solid var(--border);
   letter-spacing: -0.015em;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 .page-content h2:first-child { margin-top: 0; }
 
@@ -632,23 +647,24 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text);
   margin: 2rem 0 0.5rem;
   letter-spacing: -0.01em;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 .page-content h4 {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.09em;
   color: var(--text-muted);
   margin: 1.5rem 0 0.4rem;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 .page-content p {
   font-size: 0.95rem;
   color: var(--text);
   line-height: 1.78;
-  max-width: var(--prose-max);
+  max-width: 100%;
   margin-bottom: 1.1rem;
+  letter-spacing: 0;
 }
 .page-content p:last-child { margin-bottom: 0; }
 .page-content strong { font-weight: 700; color: var(--text); }
@@ -656,12 +672,13 @@ img { max-width: 100%; height: auto; display: block; }
 .page-content ul,
 .page-content ol {
   margin: 0.75rem 0 1.1rem 1.5rem;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 .page-content li {
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 0.35rem;
+  letter-spacing: 0;
 }
 .page-content a { font-weight: 600; }
 
@@ -669,7 +686,7 @@ hr {
   border: none;
   border-top: 2px solid var(--border);
   margin: 2rem 0;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 
 /* =====================================================
@@ -680,7 +697,7 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0;
   margin: 1.5rem 0 2.5rem;
-  max-width: var(--prose-max);
+  max-width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -699,7 +716,7 @@ hr {
 .stat-label {
   font-size: 0.58rem;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   color: rgba(255,255,255,0.68);
   margin-top: 0.35rem;
   display: block;
@@ -715,9 +732,10 @@ hr {
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
-  max-width: var(--prose-max);
+  max-width: 100%;
   font-size: 0.9rem;
   line-height: 1.65;
+  letter-spacing: 0;
 }
 .callout.amber { border-left-color: var(--accent); }
 .callout.green  { border-left-color: var(--secondary); }
@@ -728,7 +746,7 @@ hr {
   margin-bottom: 0.2rem;
   font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   font-weight: 700;
   color: var(--primary);
 }
@@ -741,12 +759,11 @@ hr {
    ===================================================== */
 .data-table-wrap {
   margin: 1.5rem 0;
-  max-width: var(--prose-max);
+  max-width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
-/* on small screens, allow horizontal scroll without losing radius */
 @media (max-width: 600px) {
   .data-table-wrap { overflow-x: auto; }
 }
@@ -764,7 +781,7 @@ hr {
   text-align: left;
   font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   color: rgba(255,255,255,0.68);
   white-space: nowrap;
   font-weight: 700;
@@ -780,6 +797,7 @@ hr {
   padding: 0.6rem 1rem;
   color: var(--text);
   font-weight: 500;
+  letter-spacing: 0;
 }
 .data-table tbody td.pos       { color: var(--secondary-dark); font-weight: 700; }
 .data-table tbody td.neg       { color: var(--red-dark);       font-weight: 700; }
@@ -793,7 +811,7 @@ hr {
   background: var(--muted);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  max-width: var(--prose-max);
+  max-width: 100%;
 }
 .chart-figure img { width: 100%; display: block; }
 .chart-figure figcaption {
@@ -802,9 +820,9 @@ hr {
   color: var(--text-dim);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
 }
-/* portrait chart (table screenshots, taller than wide) */
+/* portrait chart */
 .chart-figure.portrait { max-width: 520px; }
 
 /* =====================================================

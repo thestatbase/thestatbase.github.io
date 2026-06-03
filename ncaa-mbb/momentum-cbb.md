@@ -11,12 +11,14 @@ description: MA-NetRtg is a five-source momentum-adjusted power rating for colle
 </div>
 
 <div class="page-header">
+  <div class="page-header-inner">
   <div class="page-category ncaa">NCAA Men's Basketball &middot; Power Ratings</div>
   <h1>Momentum &amp; CBB Power Ratings</h1>
   <div class="page-meta">MA-NetRtg &middot; Top 75 KenPom Teams &middot; Data: EvanMiya + KenPom &middot; 10-fold CV R&sup2; = 0.984</div>
+  </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">

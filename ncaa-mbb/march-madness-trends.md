@@ -9,12 +9,14 @@ description: An in-depth data science study of NCAA D1 Men's Basketball using Ke
 </div>
 
 <div class="page-header">
+  <div class="page-header-inner">
   <div class="page-category ncaa">NCAA Men&rsquo;s Basketball &middot; March Madness</div>
   <h1>March Madness Trends (2002–2026)</h1>
   <div class="page-meta">24 Seasons &middot; 364 Teams Analyzed &middot; 1,535 Tournament Appearances &middot; Based on KenPom Metrics</div>
+  </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">

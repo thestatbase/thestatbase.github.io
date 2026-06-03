@@ -11,12 +11,14 @@ description: Residual-based potential framework applied to running backs using a
 </div>
 
 <div class="page-header">
+  <div class="page-header-inner">
   <div class="page-category">NFL &middot; Running Backs</div>
   <h1>NFL Running Back Potential Chart</h1>
   <div class="page-meta">2025&ndash;26 Season &middot; Data sourced from github.com/nflverse</div>
+  </div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="callout">
   Best viewed on a large screen. Viewing on smaller displays may lead to distortion in the charts.
