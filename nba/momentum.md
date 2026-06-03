@@ -18,7 +18,7 @@ description: A two-phase study examining whether momentum-based statistics can p
   </div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">
