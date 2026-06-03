@@ -11,14 +11,12 @@ description: A two-phase study examining whether momentum-based statistics can p
 </div>
 
 <div class="page-header">
-  <div class="page-header-inner">
   <div class="page-category nba">NBA &middot; Predictive Modeling</div>
   <h1>Momentum &amp; Game Outcomes in the NBA</h1>
   <div class="page-meta">AP Research &middot; Backtesting Oct 21, 2025 &ndash; Jan 4, 2026 &middot; Forward Testing Jan 24 &ndash; All-Star Break</div>
-  </div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">
