@@ -10,9 +10,6 @@ author:
 markdown: kramdown
 highlighter: rouge
 
-kramdown:
-  parse_block_html: true
-
 sass:
   style: compressed
 
