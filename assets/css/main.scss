@@ -312,6 +312,7 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.01em;
 }
 .stat-label-sub {
+  display: block;
   font-size: 0.72rem;
   color: var(--text-dim);
   font-weight: 500;
@@ -614,6 +615,11 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: calc(var(--prose-max) + 4rem);
 }
 
+/* Offset anchor-link scroll targets so the sticky nav doesn't cover the heading */
+.page-content h2,
+.page-content h3,
+.page-content h4 { scroll-margin-top: 80px; }
+
 .page-content h2 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -625,6 +631,10 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: var(--prose-max);
 }
 .page-content h2:first-child { margin-top: 0; }
+
+/* Collapse the double-margin (stat-row bottom + h2 top) when these elements precede a heading */
+.page-content .stat-row + h2,
+.page-content .callout + h2 { margin-top: 0; }
 
 .page-content h3 {
   font-size: 1.05rem;
@@ -743,20 +753,14 @@ hr {
   margin: 1.5rem 0;
   max-width: var(--prose-max);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-/* on small screens, allow horizontal scroll without losing radius */
-@media (max-width: 600px) {
-  .data-table-wrap { overflow-x: auto; }
+  overflow: hidden;    /* clips border-radius on the wrapper */
+  overflow-x: auto;   /* enables horizontal scroll on wide tables at any viewport */
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.82rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 .data-table thead { background: var(--dark); }
 .data-table thead th {
@@ -868,7 +872,7 @@ button:focus-visible {
   .projects-hero h1  { font-size: 2rem; }
   .projects-hero-inner { padding: 2.5rem 1.5rem; }
 
-  .ssc-inner         { grid-template-columns: 1fr; padding: 1.5rem; }
+  .ssc-inner         { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); padding: 1.5rem; }
   .ssh-inner         { padding: 0.85rem 1.5rem; }
 
   .breadcrumb        { padding: 0.6rem 1.5rem; }
@@ -884,4 +888,6 @@ button:focus-visible {
   .home-hero h1      { font-size: 1.95rem; }
   .stat-row          { grid-template-columns: 1fr; }
   .page-header h1    { font-size: 1.45rem; }
+  .page-content      { padding: 1.5rem 1rem 2.5rem; }
+  .ssc-inner         { grid-template-columns: 1fr; }
 }
