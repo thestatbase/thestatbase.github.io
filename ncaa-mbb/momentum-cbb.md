@@ -16,7 +16,7 @@ description: MA-NetRtg is a five-source momentum-adjusted power rating for colle
   <div class="page-meta">MA-NetRtg &middot; Top 75 KenPom Teams &middot; Data: EvanMiya + KenPom &middot; 10-fold CV R&sup2; = 0.984</div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">

@@ -16,7 +16,7 @@ description: 503 players, 2020-26. A three-phase analysis of players who transfe
   <div class="page-meta">503 Players &middot; 2020&ndash;21 thru 2025&ndash;26 &middot; D1 + D2 &middot; Data sourced from cbbanalytics.com</div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">

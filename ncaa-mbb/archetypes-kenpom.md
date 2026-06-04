@@ -14,7 +14,7 @@ description: A multiple regression analysis of all D1 teams examining how the ar
   <div class="page-meta">2025&ndash;26 Season &middot; All D1 Teams &middot; Multiple Regression Analysis</div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">

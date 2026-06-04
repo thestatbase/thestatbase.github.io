@@ -16,7 +16,7 @@ description: 566 players, 2020-26. A rigorous look at what happens to production
   <div class="page-meta">566 Players &middot; 2020&ndash;21 thru 2025&ndash;26 &middot; D2 + D1 &middot; All stats per 40 minutes</div>
 </div>
 
-<div class="page-content" markdown="1">
+<div class="page-content">
 
 <div class="stat-row">
   <div class="stat-card">
