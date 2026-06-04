@@ -16,7 +16,7 @@ description: Linear regression model comparing fantasy production to WOPR to ide
   <div class="page-meta">2025&ndash;26 Season &middot; Data sourced from github.com/nflverse</div>
 </div>
 
-<div class="page-content">
+<div class="page-content" markdown="1">
 
 <div class="callout">
   Best viewed on a large screen. Viewing on smaller displays may lead to distortion in the charts.
