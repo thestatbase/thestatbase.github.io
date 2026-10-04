@@ -1,9 +1,35 @@
----
-layout: default
-title: All Projects
-description: All StatBase research projects, sorted by sport — NFL, NBA, and NCAA Men's Basketball.
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects · The StatBase</title>
+  <meta name="description" content="All StatBase research projects, sorted by sport — NFL, NBA, and NCAA Men's Basketball.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+</head>
+<body>
 
+<!-- TOP NAV -->
+<header class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">The StatBase</a>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main">
+      <a href="/" class="nav-home-link">Home</a>
+      <a href="/projects/" class="nav-projects-btn active">Projects</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<main class="site-main" id="main-content">
+  
 <!-- PROJECTS HERO -->
 <section class="projects-hero">
   <div class="projects-hero-inner">
@@ -23,13 +49,13 @@ description: All StatBase research projects, sorted by sport — NFL, NBA, and N
 <div class="sport-section-cards">
   <div class="ssc-inner">
 
-    <a class="proj-card" href="{{ '/nfl/wr-potential/' | relative_url }}">
+    <a class="proj-card" href="/nfl/wr-potential/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">WR Potential Chart</div>
       <div class="proj-card-desc">Fantasy production compared with WOPR, followed by the 2025 year-one results. Published rebound calls improved 10 of 12 times. Methodology, baseline comparisons, and limitations.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/nfl/rb-potential/' | relative_url }}">
+    <a class="proj-card" href="/nfl/rb-potential/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">RB Potential Chart</div>
       <div class="proj-card-desc">Fantasy production compared with carries, targets, and touchdowns. The 2025 results show stronger decline warnings than rebound calls. Includes year-one rates and baseline comparisons.</div>
@@ -48,7 +74,7 @@ description: All StatBase research projects, sorted by sport — NFL, NBA, and N
 <div class="sport-section-cards alt">
   <div class="ssc-inner">
 
-    <a class="proj-card" href="{{ '/nba/momentum/' | relative_url }}">
+    <a class="proj-card" href="/nba/momentum/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">Momentum &amp; Game Outcomes</div>
       <div class="proj-card-desc">AP Research study: can momentum-based statistics predict NBA game outcomes? Two-phase backtesting and forward-testing study using a novel Scoring Run Performance metric. 68.2% accuracy over 148 games.</div>
@@ -67,37 +93,37 @@ description: All StatBase research projects, sorted by sport — NFL, NBA, and N
 <div class="sport-section-cards">
   <div class="ssc-inner">
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/up-down-up-transfers/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/up-down-up-transfers/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">Up-Down-Up Transfer Analysis</div>
       <div class="proj-card-desc">503 players, 2020&ndash;26. Three-phase path analysis: competitive program &rarr; weaker school &rarr; return to competitive level. Only 45.3% meet the success threshold. System fit matters nearly as much as player quality.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/d2-to-d1-transfers/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/d2-to-d1-transfers/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">D2-to-D1 Transfer Analysis</div>
       <div class="proj-card-desc">566 players, 2020&ndash;26. The D2-to-D1 jump is harder than assumed &mdash; only 17.0% maintain relative production. WS/40 (r = 0.386) is the best single predictor. The profile of a player who translates is identifiable.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/translatability-index/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/translatability-index/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">Translatability Index (TI)</div>
       <div class="proj-card-desc">Full methodology for the 0&ndash;100 composite score used across both transfer analyses. Five components: Efficiency, Jump Risk, System Fit, Trajectory, and Volume Appropriateness. Includes an explanation of the paradox in the success-rate-by-tier chart.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/momentum-cbb/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/momentum-cbb/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">Momentum &amp; CBB Power Ratings</div>
       <div class="proj-card-desc">MA-NetRtg: a five-source momentum-adjusted power rating blending KenPom AdjEM, EvanMiya head-to-head data, schedule strength, kill shots, and roster quality. 10-fold CV R&sup2; = 0.984. Top 75 KenPom teams.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/archetypes-kenpom/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/archetypes-kenpom/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">Archetypes &amp; KenPom Ratings</div>
       <div class="proj-card-desc">Multiple regression analysis of all D1 teams: how strongly does archetype composition of a team&rsquo;s best players predict KenPom rating? r = 0.72 for best player vs. team KenPom. 2025&ndash;26 season.</div>
     </a>
 
-    <a class="proj-card" href="{{ '/ncaa-mbb/march-madness-trends/' | relative_url }}">
+    <a class="proj-card" href="/ncaa-mbb/march-madness-trends/">
       <span class="proj-card-arrow">&#8594;</span>
       <div class="proj-card-title">March Madness Trends (2002&ndash;2026)</div>
       <div class="proj-card-desc">24 seasons of KenPom data. Seeding patterns, upset rates, conference dominance, ML feature importance (AUC = 0.756), coaching longevity, and the 2026 tournament field outlook.</div>
@@ -105,3 +131,37 @@ description: All StatBase research projects, sorted by sport — NFL, NBA, and N
 
   </div>
 </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-brand">The StatBase</span>
+      <span class="footer-tagline">Advanced Sports Analytics</span>
+    </div>
+    <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!links.contains(e.target) && !toggle.contains(e.target)) {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+
+</body>
+</html>

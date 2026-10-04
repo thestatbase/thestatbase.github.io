@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL RB Potential Chart · The StatBase</title>
+  <meta name="description" content="The original RB volume and potential method and its 2025 year-one results, including published selections, positive and negative potential, boxes, and baseline comparisons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/potential.css">
+</head>
+<body>
+
+<!-- TOP NAV -->
+<header class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">The StatBase</a>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main">
+      <a href="/" class="nav-home-link">Home</a>
+      <a href="/projects/" class="nav-projects-btn">Projects</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<main class="site-main" id="main-content">
+  
+<div class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/projects/">Projects</a> <span>/</span> RB Potential Chart</div>
+<div class="page-header">
+  <div class="potential-header-inner">
+    <div class="page-category">NFL &middot; Running Backs</div>
+    <h1>NFL Running Back Potential Chart</h1>
+    <div class="page-meta">2025 regular season &middot; Year-one results &middot; Data: nflverse</div>
+    <nav class="potential-position-nav" aria-label="Potential charts">
+      <a href="/nfl/wr-potential/">Wide receivers</a>
+      <a href="/nfl/rb-potential/" aria-current="page">Running backs</a>
+    </nav>
+  </div>
+</div>
+<article class="page-content potential-content">
+  <nav class="potential-section-nav" aria-label="On this page">
+    <a href="#overview">Overview</a><a href="#results">Year-one results</a><a href="#method">Methodology</a><a href="#boxes">Boxes</a><a href="#examples">Player examples</a><a href="#limitations">Limitations</a><a href="#charts">Original charts</a>
+  </nav>
+
+  <section id="overview" class="potential-intro">
+    <h2>Project Overview and Goal</h2>
+    <p>The running back chart applies the same general concept as the receiver chart: compare a player's current fantasy production with the production typically associated with his role, then evaluate whether that difference can identify a future change in scoring. However, running backs receive opportunities differently, requiring a separate index for their involvement in the offense.</p>
+    <p>I used an index combining carries, targets, and touchdowns, then compared it with fantasy points per game in 1 point-per-reception scoring. A running back below the regression line received positive potential, while one above it received negative potential. The goal was to determine whether these differences could identify players whose scoring would improve or decline.</p>
+    <p>The first-year results show that the decline selections were much more successful than the rebound selections. Eight of nine Least Potential selections declined, while only two of nine Most Potential selections improved. The volume leaders and green box also identified high later scorers, though high average production did not always mean consistent scoring in every game.</p>
+  </section>
+
+  <div class="stat-row" aria-label="Published RB selection results">
+    <div class="stat-card"><span class="stat-value">22.2%</span><span class="stat-label">Most Potential improved</span><span class="potential-stat-detail">2 of 9 selections</span></div>
+    <div class="stat-card green"><span class="stat-value">88.9%</span><span class="stat-label">Least Potential declined</span><span class="potential-stat-detail">8 of 9 selections</span></div>
+    <div class="stat-card dark"><span class="stat-value">100%</span><span class="stat-label">Highest Volume stayed top five</span><span class="potential-stat-detail">9 selections, 1 player</span></div>
+  </div>
+
+  <section id="results">
+    <h2>Year-One Results</h2>
+    <p>The original RB charts were published after Weeks 7 through 16 of the 2025 regular season. I evaluated the selections against the next three scheduled games of each player's team, excluding byes. The following results use average PPR points per recorded appearance unless a team-game measure is specifically stated. This review was completed after the season, using the selections that had already appeared on the published charts.</p>
+
+    <div data-results>
+      <div class="potential-result-controls" role="group" aria-label="Choose RB result comparison">
+        <button type="button" data-result-view="calls" aria-pressed="true">Published calls</button>
+        <button type="button" data-result-view="direction" aria-pressed="false">Full potential signal</button>
+        <button type="button" data-result-view="boxes" aria-pressed="false">Box results</button>
+      </div>
+      <div data-result-panel="calls" aria-live="polite">
+        <h3 class="potential-result-title">The Published Superlatives</h3>
+        <div class="potential-legend"><span><i></i>Published selection</span><span><i class="potential-baseline-key"></i>Random-player baseline</span></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Most Potential</strong><span>Scoring increased</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:22.2%"></span></div><span class="potential-bar-number">22.2%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:46.8%"></span></div><span class="potential-bar-number">46.8%</span></div></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Least Potential</strong><span>Scoring declined</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:88.9%"></span></div><span class="potential-bar-number">88.9%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:53.2%"></span></div><span class="potential-bar-number">53.2%</span></div></div>
+        <div class="data-table-wrap"><table class="data-table"><caption>Published arrows, next three team games</caption><thead><tr><th scope="col">Chart label</th><th scope="col">Outcome tested</th><th scope="col">Success</th><th scope="col">Random baseline</th></tr></thead><tbody>
+          <tr><td>Most Potential</td><td>Scoring increased</td><td class="potential-number">2/9 &middot; 22.2%</td><td>46.8%</td></tr>
+          <tr><td>Least Potential</td><td>Scoring declined</td><td class="potential-number">8/9 &middot; 88.9%</td><td>53.2%</td></tr>
+          <tr><td>Highest Production</td><td>Future scoring top five</td><td class="potential-number">7/9 &middot; 77.8%</td><td>9.9%</td></tr>
+          <tr><td>Highest Volume</td><td>Future scoring top five</td><td class="potential-number">9/9 &middot; 100.0%</td><td>9.9%</td></tr>
+        </tbody></table></div>
+        <p class="potential-note">Random-player rates are the rounded comparison rates reported in the year-one analysis, rather than comparisons restricted to players already scoring at least 10 PPR per game. Each baseline tests the same outcome as its row. These are descriptive comparisons; the difference alone does not establish statistical significance.</p>
+        <p>Only one Most Potential selection improved by at least 2 PPR points per appearance, while seven Least Potential selections declined by at least 2 points. Mean changes were -1.68 and -7.79 points, respectively. All nine evaluated Highest Volume selections were Christian McCaffrey, so the 100% rate describes repeated selections of one player.</p>
+      </div>
+      <div data-result-panel="direction" aria-live="polite">
+        <h3 class="potential-result-title">Positive and Negative Potential</h3>
+        <p>To evaluate the general signal separately from the published arrows, I examined every displayed running back averaging at least 10 current PPR points per appearance. This produced 246 player-windows from 38 distinct running backs.</p>
+        <div class="data-table-wrap"><table class="data-table"><caption>Running backs averaging at least 10 current PPR per appearance</caption><thead><tr><th scope="col">Measure</th><th scope="col">Correct outcomes</th><th scope="col">Rate</th></tr></thead><tbody>
+          <tr><td>Positive potential followed by improvement</td><td>61/144</td><td>42.4%</td></tr>
+          <tr><td>Negative potential followed by decline</td><td>61/102</td><td>59.8%</td></tr>
+          <tr><td>Overall direction accuracy</td><td>122/246</td><td>49.6%</td></tr>
+          <tr><td>Always predict decline, same cohort</td><td>246 evaluated windows</td><td>58.5%</td></tr>
+          <tr><td>Direction accuracy, all plotted running backs</td><td>232/457</td><td>50.8%</td></tr>
+        </tbody></table></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Overall direction, 10+ PPR cohort</strong><span>The same 246 windows</span></div><div class="potential-bar-row"><span>Chart</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:49.6%"></span></div><span class="potential-bar-number">49.6%</span></div><div class="potential-bar-row"><span>Decline rule</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:58.5%"></span></div><span class="potential-bar-number">58.5%</span></div></div>
+        <p>The full signal did not exceed the always-decline baseline. Its positive-potential results also show that being below the fitted line was not enough to make improvement the more common outcome. This is important when interpreting an individual running back's potential score.</p>
+        <details class="potential-detail"><summary>Numerical scoring error</summary><div><p>The regression line was also evaluated as an estimate of future scoring. Its mean absolute error was 4.51 PPR points per appearance, compared with 4.33 when using the player's current average. Balanced direction accuracy, which gives increases and declines equal weight, was 51.1%. In this first-year test, using the line did not improve numerical scoring accuracy over the current-average baseline.</p></div></details>
+      </div>
+      <div data-result-panel="boxes" aria-live="polite">
+        <h3 class="potential-result-title">Green and Yellow Boxes</h3>
+        <div class="data-table-wrap"><table class="data-table"><caption>Original published boxes, next three team games</caption><thead><tr><th scope="col">Selection and outcome</th><th scope="col">Success</th><th scope="col">Random baseline</th></tr></thead><tbody>
+          <tr><td>Green: average at least 15 PPR per appearance</td><td class="potential-number">29/41 &middot; 70.7%</td><td>27.0%</td></tr>
+          <tr><td>Green: at least 10 PPR in every team game</td><td class="potential-number">19/42 &middot; 45.2%</td><td>19.5%</td></tr>
+          <tr><td>Yellow: improvement of at least 2 PPR per appearance</td><td class="potential-number">27/94 &middot; 28.7%</td><td>32.7%</td></tr>
+        </tbody></table></div>
+        <p class="potential-note">Appearance-based rows exclude windows with no later recorded appearance. The every-team-game row counts absences as zero. Random-player baselines are the rounded rates from the year-one comparison and use the corresponding outcome definition.</p>
+        <p>The green box identified high average scorers more frequently than the random baseline. However, fewer than half its selections reached 10 points in all three team games. The yellow box did not exceed its random-player baseline for improvements of at least 2 points.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>Methodology and Definitions</h2>
+    <h3>The Volume Per Game Index</h3>
+    <p>A running back's involvement cannot be evaluated through carries alone, as targets contribute to fantasy scoring through both receptions and receiving yards. The original Volume Per Game Index therefore combined carries and targets with a weighted touchdown term. The formula used for these charts is shown below.</p>
+    <div class="potential-formula">Volume Per Game Index = (targets + carries + 4.5 &times; total touchdowns) / recorded player games<br>Chart y = full-PPR fantasy points / recorded player games</div>
+    <p>The touchdown term reflects a component of production that is especially important to a running back's fantasy scoring. However, touchdowns also directly contribute to the scoring being plotted on the vertical axis. The index therefore combines opportunity and realized production, rather than measuring workload alone. Air yards are not part of this original formula.</p>
+    <h3>Potential and the Regression Line</h3>
+    <p>A least-squares line describes the relationship between the index and current scoring among the plotted running backs. Potential is the fitted scoring value minus the player's current scoring average. It is the negative of the usual regression residual.</p>
+    <div class="potential-formula">Potential = fitted PPR per game - current PPR per game</div>
+    <p>For example, a running back averaging 14 points whose index corresponds to 17 on the line would have +3 potential. The score describes a gap in the current relationship. Whether that gap correctly identifies later improvement must be evaluated using future games, which is the purpose of the year-one results above.</p>
+    <h3>How the Results Were Evaluated</h3>
+    <p>Each eligible chart selection was compared with scoring in the next three scheduled games of the player's cutoff team. A window is one player evaluated from one chart, so the same running back can appear in several windows. Improvement means the later average exceeded the average at publication; decline means it was lower. Ties do not count as a correct change.</p>
+    <p>Appearance-based averages use games with recorded player statistics. Team-game measures also include games without a later player appearance, counting those as zero. Byes do not count as games, and windows without three remaining regular-season games or the required same-team follow-up are excluded from the primary three-game test.</p>
+  </section>
+
+  <section id="boxes">
+    <h2>What the Boxes Showed</h2>
+    <p>The green and yellow boxes were evaluated using the rectangles that appeared on each original chart. A player was included when the center of his dot fell inside the published rectangle. The boundaries were measured from the charts rather than replaced with new boundaries chosen after the results were known.</p>
+    <div class="data-table-wrap"><table class="data-table"><caption>RB box membership and future scoring</caption><thead><tr><th scope="col">Box</th><th scope="col">Selections</th><th scope="col">Distinct players</th><th scope="col">Future PPR / appearance</th><th scope="col">Future PPR / team game</th></tr></thead><tbody><tr><td>Green</td><td>42</td><td>8</td><td>18.35</td><td>17.63</td></tr><tr><td>Yellow</td><td>105</td><td>25</td><td>12.25</td><td>10.59</td></tr></tbody></table></div>
+    <p>The green box's later average of 18.35 points per appearance shows that it selected a group with strong production. However, the 45.2% every-game success rate is a different measure, and it does not support treating every player in the box as dependable in every game. The yellow box produced more moderate scoring, with improvements of at least 2 points in 28.7% of appearance-observed windows.</p>
+    <p class="potential-note">Scoring per appearance was available for 41 green and 94 yellow windows. Team-game results include all 42 and 105 complete windows. Acquisition prices were not included in the analysis, so the original Value label was not evaluated as a measure of market value.</p>
+  </section>
+
+  <section id="examples">
+    <h2>Notable Individual Predictions</h2>
+    <div class="potential-example"><h3>Saquon Barkley: Most Potential after Week 7</h3><p>Barkley averaged 13.49 PPR points per appearance when selected. His later three-game average was 18.83, an increase of approximately 5.35 points using the unrounded values. This was a successful rebound selection, but it was one of only two successful Most Potential windows.</p></div>
+    <div class="potential-example"><h3>Quinshon Judkins: Repeated Most Potential Selections</h3><p>Judkins was selected on eight consecutive charts after Weeks 8 through 15. He improved in only one of those follow-up windows, and that improvement was 1.44 points per appearance. The repeated selections had a large impact on the overall rebound result and show that a positive gap can persist without a corresponding increase in scoring.</p></div>
+    <div class="potential-example"><h3>Jonathan Taylor: Least Potential after Week 10</h3><p>Taylor was averaging 27.39 points when selected, while his later average was 11.70. His decline of 15.69 points followed the direction identified by the chart. Even so, a decline from an exceptionally high average should be interpreted separately from a claim that the player has little remaining fantasy value.</p></div>
+    <div class="potential-example"><h3>Christian McCaffrey: Highest Volume</h3><p>All nine evaluated Highest Volume selections were McCaffrey. He remained in the future scoring top five in each window and averaged 24.43 later points per appearance across those selections. This was a strong result for his season, but the repeated selections do not show that the same outcome would occur across nine different running backs.</p></div>
+  </section>
+
+  <section id="limitations">
+    <h2>Conclusions and Limitations</h2>
+    <p>The first year provides stronger support for the published decline warnings than for the rebound calls. The Most Potential selections improved less frequently than their random-player baseline, and the broader signal also fell below the always-decline baseline. The results therefore do not support using positive potential alone as a reliable predictor of an increase in scoring.</p>
+    <p>Please note that the nine Most Potential selections involved only two distinct players. After removing identical player and endpoint windows caused by byes, the result was two improvements in eight windows. Counting only the first selection of each distinct player produced one improvement in two selections. These small samples limit how broadly the findings can be applied.</p>
+    <p>The index includes touchdowns, and a change in touchdown frequency can affect both the index and scoring. Injuries, changes in the backfield, and changes in offensive role can also alter production in ways the line does not account for. The fitted relationship describes the current dataset; it does not establish that a player's efficiency will return to the league relationship.</p>
+    <p>Finally, the Least Potential selections still averaged 17.04 later points per appearance. Correctly predicting that scoring would decline is different from establishing that a player would stop producing at a useful level.</p>
+    <details class="potential-detail"><summary>Did each arrow identify the literal chart maximum or minimum?</summary><div><p>This is a separate check of the label at publication, rather than a future scoring result. Among all displayed dots, Most Potential identified the residual leader on 9 of 10 charts (90.0%). Least Potential, Highest Production, and Highest Volume each identified the corresponding chart extreme on all 10 charts. A 0.01-point tolerance was used for rounding.</p><p>The forward-scoring tables have fewer evaluated selections because charts after Week 16 do not have three remaining regular-season games. Label accuracy at publication should not be interpreted as future prediction accuracy.</p></div></details>
+  </section>
+
+  <section id="charts" class="potential-archive">
+    <h2>Original 2025 Charts</h2>
+    <p>The original weekly charts show the selections and boxes as they appeared during the first year. They are retained as the record against which the later results were evaluated.</p>
+    <a class="potential-archive-link" href="https://public.flourish.studio/story/3410504/" target="_blank" rel="noopener">Open the original RB charts &rarr;</a>
+    <p class="potential-note">Data source: <a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" target="_blank" rel="noopener">nflverse player statistics</a>. Results refer to the 2025 regular season. Review updated October 4, 2026.</p>
+  </section>
+</article>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-brand">The StatBase</span>
+      <span class="footer-tagline">Advanced Sports Analytics</span>
+    </div>
+    <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!links.contains(e.target) && !toggle.contains(e.target)) {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+<script src="/assets/js/potential.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+---
+layout: default
+title: NFL WR Potential Chart
+description: The original WR potential method and its 2025 year-one results, including published selections, positive and negative potential, boxes, and baseline comparisons.
+permalink: /nfl/wr-potential/
+potential_page: true
+---
+
+<div class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> <span>/</span> <a href="{{ '/projects/' | relative_url }}">Projects</a> <span>/</span> WR Potential Chart</div>
+<div class="page-header">
+  <div class="potential-header-inner">
+    <div class="page-category">NFL &middot; Wide Receivers</div>
+    <h1>NFL Wide Receiver Potential Chart</h1>
+    <div class="page-meta">2025 regular season &middot; Year-one results &middot; Data: nflverse</div>
+    <nav class="potential-position-nav" aria-label="Potential charts">
+      <a href="{{ '/nfl/wr-potential/' | relative_url }}" aria-current="page">Wide receivers</a>
+      <a href="{{ '/nfl/rb-potential/' | relative_url }}">Running backs</a>
+    </nav>
+  </div>
+</div>
+<article class="page-content potential-content">
+  <nav class="potential-section-nav" aria-label="On this page">
+    <a href="#overview">Overview</a><a href="#results">Year-one results</a><a href="#method">Methodology</a><a href="#boxes">Boxes</a><a href="#examples">Player examples</a><a href="#limitations">Limitations</a><a href="#charts">Original charts</a>
+  </nav>
+
+  <section id="overview" class="potential-intro">
+    <h2>Project Overview and Goal</h2>
+    <p>A receiver can receive a large share of his team's passing opportunities without producing the fantasy points that would typically come with that role. The goal of this project was to identify those differences, then determine if they could be used to predict a change in the player's future production.</p>
+    <p>I used linear regression to compare a receiver's opportunity with his fantasy points per game in 1 point-per-reception scoring. Players below the league regression line were given positive potential, while players above it were given negative potential. The theory was that players producing less than their opportunity would suggest may improve, while players producing considerably more may decline.</p>
+    <p>The first year produced different results depending on which part of the chart was evaluated. The receivers specifically marked with Most Potential improved in 10 of 12 evaluated windows. However, positive potential across the broader group of receivers was much less successful. Both findings are important when determining how the chart should be interpreted.</p>
+  </section>
+
+  <div class="stat-row" aria-label="Published WR selection results">
+    <div class="stat-card"><span class="stat-value">83.3%</span><span class="stat-label">Most Potential improved</span><span class="potential-stat-detail">10 of 12 selections</span></div>
+    <div class="stat-card green"><span class="stat-value">91.7%</span><span class="stat-label">Least Potential declined</span><span class="potential-stat-detail">11 of 12 selections</span></div>
+    <div class="stat-card dark"><span class="stat-value">75.0%</span><span class="stat-label">Highest Volume stayed top five</span><span class="potential-stat-detail">9 of 12 selections</span></div>
+  </div>
+
+  <section id="results">
+    <h2>Year-One Results</h2>
+    <p>The original WR charts were published after Weeks 3 through 16 of the 2025 regular season. I evaluated the selections against the next three scheduled games of each player's team, excluding byes. The following results use average PPR points per recorded appearance unless a team-game measure is specifically stated. This review was completed after the season, using the selections that had already appeared on the published charts.</p>
+
+    <div data-results>
+      <div class="potential-result-controls" role="group" aria-label="Choose WR result comparison">
+        <button type="button" data-result-view="calls" aria-pressed="true">Published calls</button>
+        <button type="button" data-result-view="direction" aria-pressed="false">Full potential signal</button>
+        <button type="button" data-result-view="boxes" aria-pressed="false">Box results</button>
+      </div>
+      <div data-result-panel="calls" aria-live="polite">
+        <h3 class="potential-result-title">The Published Superlatives</h3>
+        <div class="potential-legend"><span><i></i>Published selection</span><span><i class="potential-baseline-key"></i>Random-player baseline</span></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Most Potential</strong><span>Scoring increased</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:83.3%"></span></div><span class="potential-bar-number">83.3%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:41%"></span></div><span class="potential-bar-number">41.0%</span></div></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Least Potential</strong><span>Scoring declined</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:91.7%"></span></div><span class="potential-bar-number">91.7%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:54.3%"></span></div><span class="potential-bar-number">54.3%</span></div></div>
+        <div class="data-table-wrap"><table class="data-table"><caption>Published arrows, next three team games</caption><thead><tr><th scope="col">Chart label</th><th scope="col">Outcome tested</th><th scope="col">Success</th><th scope="col">Random baseline</th></tr></thead><tbody>
+          <tr><td>Most Potential</td><td>Scoring increased</td><td class="potential-number">10/12 &middot; 83.3%</td><td>41.0%</td></tr>
+          <tr><td>Least Potential</td><td>Scoring declined</td><td class="potential-number">11/12 &middot; 91.7%</td><td>54.3%</td></tr>
+          <tr><td>Highest Production</td><td>Future scoring top five</td><td class="potential-number">3/13 &middot; 23.1%</td><td>3.3%</td></tr>
+          <tr><td>Highest Volume</td><td>Future scoring top five</td><td class="potential-number">9/12 &middot; 75.0%</td><td>3.3%</td></tr>
+        </tbody></table></div>
+        <p class="potential-note">Random-player rates are the rounded comparison rates reported in the year-one analysis, rather than comparisons restricted to players already scoring at least 10 PPR per game. Each baseline tests the same outcome as its row. These are descriptive comparisons; the difference alone does not establish statistical significance.</p>
+        <p>Of the 12 Most Potential selections, six improved by at least 2 PPR points per appearance. Of the 12 Least Potential selections, 11 declined by at least 2 points. The mean changes were +3.39 and -7.09 points, respectively. These windows include repeat selections of the same players.</p>
+      </div>
+      <div data-result-panel="direction" aria-live="polite">
+        <h3 class="potential-result-title">Positive and Negative Potential</h3>
+        <p>To evaluate the general signal separately from the published arrows, I examined every displayed receiver averaging at least 10 current PPR points per appearance. This produced 532 player-windows from 60 distinct receivers.</p>
+        <div class="data-table-wrap"><table class="data-table"><caption>Receivers averaging at least 10 current PPR per appearance</caption><thead><tr><th scope="col">Measure</th><th scope="col">Correct outcomes</th><th scope="col">Rate</th></tr></thead><tbody>
+          <tr><td>Positive potential followed by improvement</td><td>77/192</td><td>40.1%</td></tr>
+          <tr><td>Negative potential followed by decline</td><td>244/340</td><td>71.8%</td></tr>
+          <tr><td>Overall direction accuracy</td><td>321/532</td><td>60.3%</td></tr>
+          <tr><td>Always predict decline, same cohort</td><td>532 evaluated windows</td><td>67.5%</td></tr>
+          <tr><td>Direction accuracy, all plotted receivers</td><td>1,078/1,895</td><td>56.9%</td></tr>
+        </tbody></table></div>
+        <div class="potential-comparison"><div class="potential-comparison-label"><strong>Overall direction, 10+ PPR cohort</strong><span>The same 532 windows</span></div><div class="potential-bar-row"><span>Chart</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:60.3%"></span></div><span class="potential-bar-number">60.3%</span></div><div class="potential-bar-row"><span>Decline rule</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:67.5%"></span></div><span class="potential-bar-number">67.5%</span></div></div>
+        <p>Negative potential was more successful than positive potential in this group. However, the overall direction accuracy did not exceed a rule that simply predicted decline for every receiver. Selecting players who were already scoring at least 10 points made decline common, which is why that baseline must be considered alongside the chart's own accuracy.</p>
+        <details class="potential-detail"><summary>Numerical scoring error</summary><div><p>The regression line was also evaluated as an estimate of future scoring. Its mean absolute error was 4.55 PPR points per appearance, compared with 4.68 when using the player's current average. Balanced direction accuracy, which gives increases and declines equal weight, was 56.2%. The estimated error improvement was small, and the player-bootstrap range included no improvement.</p></div></details>
+      </div>
+      <div data-result-panel="boxes" aria-live="polite">
+        <h3 class="potential-result-title">Green and Yellow Boxes</h3>
+        <div class="data-table-wrap"><table class="data-table"><caption>Original published boxes, next three team games</caption><thead><tr><th scope="col">Selection and outcome</th><th scope="col">Success</th><th scope="col">Random baseline</th></tr></thead><tbody>
+          <tr><td>Green: average at least 15 PPR per appearance</td><td class="potential-number">32/59 &middot; 54.2%</td><td>10.0%</td></tr>
+          <tr><td>Green: at least 10 PPR in every team game</td><td class="potential-number">20/61 &middot; 32.8%</td><td>5.0%</td></tr>
+          <tr><td>Yellow: improvement of at least 2 PPR per appearance</td><td class="potential-number">57/261 &middot; 21.8%</td><td>23.5%</td></tr>
+        </tbody></table></div>
+        <p class="potential-note">Appearance-based rows exclude windows with no later recorded appearance. The every-team-game row counts absences as zero. Random-player baselines are the rounded rates from the year-one comparison and use the corresponding outcome definition.</p>
+        <p>The green box was more successful at identifying high average scorers than players who reached 10 points in every game. The yellow box did not exceed its random-player baseline for improvements of at least 2 points.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>Methodology and Definitions</h2>
+    <h3>Opportunity and Production</h3>
+    <p>WOPR, or Weighted Opportunity Rating, combines a receiver's target share and air-yards share. Target share measures how many of a team's pass attempts are directed toward the receiver. Air-yards share measures how much of the team's intended receiving distance belongs to him. Combining the two provides a way to evaluate the opportunity the receiver has received, rather than relying only on the yards or touchdowns he has produced.</p>
+    <div class="potential-formula">WOPR = 1.5 &times; target share + 0.7 &times; air-yards share<br>Original chart x = 100 &times; WOPR &times; selected week / recorded player games<br>Chart y = full-PPR fantasy points / recorded player games</div>
+    <p>The original horizontal axis includes the selected-week and player-game adjustment shown above. WOPR itself is already based on shares, so this adjustment can change a player's position when he has missed games. The chart's x value should therefore be read as the original opportunity index, rather than an unadjusted WOPR share.</p>
+    <h3>Potential and the Regression Line</h3>
+    <p>A least-squares line describes the relationship between the opportunity index and current scoring among the plotted receivers. Potential is the fitted scoring value minus the player's current scoring average. It is the negative of the usual regression residual.</p>
+    <div class="potential-formula">Potential = fitted PPR per game - current PPR per game</div>
+    <p>For example, a receiver averaging 10 points whose position on the line corresponds to 13 would have +3 potential. That describes a gap of 3 points between his current production and the fitted relationship. It does not establish that he will score exactly 13 points in the future.</p>
+    <h3>How the Results Were Evaluated</h3>
+    <p>Each eligible chart selection was compared with scoring in the next three scheduled games of the player's cutoff team. A window is one player evaluated from one chart, so the same receiver can appear in several windows. Improvement means the later average exceeded the average at publication; decline means it was lower. Ties do not count as a correct change.</p>
+    <p>Appearance-based averages use games with recorded player statistics. Team-game measures also include games without a later player appearance, counting those as zero. Windows without three remaining regular-season games, or without the required same-team follow-up, are excluded from the primary three-game test. One ambiguous Week 14 WR potential arrow was also excluded.</p>
+  </section>
+
+  <section id="boxes">
+    <h2>What the Boxes Showed</h2>
+    <p>The green and yellow boxes were evaluated using the rectangles that appeared on each original chart. A player was included when the center of his dot fell inside the published rectangle. The boundaries were measured from the charts rather than replaced with new boundaries chosen after the results were known.</p>
+    <div class="data-table-wrap"><table class="data-table"><caption>WR box membership and future scoring</caption><thead><tr><th scope="col">Box</th><th scope="col">Selections</th><th scope="col">Distinct players</th><th scope="col">Future PPR / appearance</th><th scope="col">Future PPR / team game</th></tr></thead><tbody><tr><td>Green</td><td>61</td><td>13</td><td>16.39</td><td>14.55</td></tr><tr><td>Yellow</td><td>273</td><td>51</td><td>11.34</td><td>10.02</td></tr></tbody></table></div>
+    <p>The green box contained receivers with higher later averages, but only 20 of its 61 selections reached 10 points in all three team games. This distinction matters, as a player can have a strong average while producing considerably less in one individual game. For the yellow box, the 21.8% improvement rate does not support interpreting every selection as a likely breakout.</p>
+    <p class="potential-note">Scoring per appearance was available for 59 green and 261 yellow windows. Team-game results include all 61 and 273 complete windows. Acquisition prices were not included in the analysis, so the original Value label was not evaluated as a measure of market value.</p>
+  </section>
+
+  <section id="examples">
+    <h2>Notable Individual Predictions</h2>
+    <div class="potential-example"><h3>A.J. Brown: Most Potential after Week 11</h3><p>Brown averaged 11.30 PPR points per appearance when selected. His later three-game average was 25.40, an increase of 14.10 points. His three Most Potential selections had a large impact on the overall result: removing them reduces the mean improvement from +3.39 to +0.67 points. The remaining selections still improved in seven of nine windows.</p></div>
+    <div class="potential-example"><h3>Jordan Addison: Least Potential after Week 7</h3><p>Addison's current average was 17.43 points, while his later average was 8.83. The decline of 8.60 points followed the direction identified by the chart. This is an example of negative potential correctly preceding a substantial decline.</p></div>
+    <div class="potential-example"><h3>Jerry Jeudy: Most Potential after Week 10</h3><p>Jeudy was averaging 7.50 points when selected, but averaged 4.53 in the follow-up, a decline of 2.97. The selection was incorrect despite a positive potential score. It also shows why a result based on repeated selections must be distinguished from a result based on many different players.</p></div>
+  </section>
+
+  <section id="limitations">
+    <h2>Conclusions and Limitations</h2>
+    <p>The first year supports a narrower conclusion than saying that every receiver with positive potential is likely to improve. The published Most Potential and Least Potential selections frequently moved in the indicated direction. However, the full signal was less successful, and its direction accuracy was below the always-decline baseline for receivers already averaging at least 10 points.</p>
+    <p>Please note that the 12 Most Potential selections involved only four distinct receivers. Their follow-up windows can overlap, and weekly repeat selections are not independent evidence. After removing identical player and endpoint windows caused by byes, the result was nine improvements in 11 windows. Counting only the first selection of each distinct receiver produced three improvements in four selections.</p>
+    <p>The chart also cannot fully account for injuries, changes in quarterback play, or changes in a player's role. The fitted line describes scoring and opportunity from the same period, so a large gap is not proof that the gap will disappear. Furthermore, a correctly predicted decline does not necessarily mean that the receiver stopped being productive: the Least Potential selections still averaged 13.42 later points per appearance.</p>
+    <details class="potential-detail"><summary>Did each arrow identify the literal chart maximum or minimum?</summary><div><p>This is a separate check of the label at publication, rather than a future scoring result. Among all displayed dots, Most Potential identified the residual leader on 9 of 13 unambiguous charts (69.2%); Least Potential identified the residual minimum on 4 of 14 (28.6%). Highest Production identified the scoring maximum on 11 of 14 (78.6%), while all 13 explicit Highest Volume labels identified the x-axis maximum.</p><p>A 0.01-point tolerance was used for rounding. The Week 15 Higher Volume caption was not graded as a Highest Volume claim. Different eligibility restrictions can change the literal leader, so the published selections above remain the selections actually marked on the charts.</p></div></details>
+  </section>
+
+  <section id="charts" class="potential-archive">
+    <h2>Original 2025 Charts</h2>
+    <p>The original weekly charts show the selections and boxes as they appeared during the first year. They are retained as the record against which the later results were evaluated.</p>
+    <a class="potential-archive-link" href="https://public.flourish.studio/story/3356523/" target="_blank" rel="noopener">Open the original WR charts &rarr;</a>
+    <p class="potential-note">Data source: <a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" target="_blank" rel="noopener">nflverse player statistics</a>. Results refer to the 2025 regular season. Review updated October 4, 2026.</p>
+  </section>
+</article>

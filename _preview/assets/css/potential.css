@@ -1,0 +1,58 @@
+/* The year-one pages extend the existing StatBase theme. */
+.potential-header-inner { max-width: 1056px; margin: 0 auto; }
+.potential-content { max-width: 1056px; margin: 0 auto; }
+.potential-content p, .potential-content h2, .potential-content h3,
+.potential-content .data-table-wrap, .potential-content .callout,
+.potential-content .stat-row { max-width: none; }
+.potential-content .potential-intro { max-width: 820px; }
+.potential-section-nav { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--border); margin-bottom: 1.75rem; font-size: .82rem; }
+.potential-position-nav { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.3rem; }
+.potential-position-nav a { border: 1px solid var(--border); padding: .45rem .9rem; border-radius: var(--radius); font-size: .8rem; font-weight: 600; color: var(--text-muted); }
+.potential-position-nav a[aria-current="page"] { background: var(--primary-light); color: var(--primary-dark); border-color: var(--primary); }
+.potential-content .stat-label { color: #fff; font-size: .65rem; letter-spacing: .07em; }
+.potential-stat-detail { display: block; color: #fff; font-size: .8rem; margin-top: .4rem; }
+.potential-result-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 1.5rem; }
+.potential-result-controls button { font: 600 .84rem 'Outfit', sans-serif; padding: .65rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--text-muted); cursor: pointer; min-height: 44px; }
+.potential-result-controls button[aria-pressed="true"] { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-light); }
+.potential-content [hidden] { display: none !important; }
+.potential-content .potential-result-title { margin-top: 0; }
+.potential-legend { display: flex; flex-wrap: wrap; gap: .8rem 1.3rem; font-size: .8rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+.potential-legend span { display: inline-flex; gap: .45rem; align-items: center; }
+.potential-legend i { display: inline-block; width: 16px; height: 8px; background: var(--primary); }
+.potential-legend .potential-baseline-key { background: #9ca3af; }
+.potential-comparison { margin: 0 0 1.4rem; }
+.potential-comparison-label { display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: baseline; justify-content: space-between; margin-bottom: .5rem; }
+.potential-comparison-label strong { font-size: .9rem; }
+.potential-comparison-label span { font-size: .78rem; color: var(--text-muted); }
+.potential-bar-row { display: grid; grid-template-columns: 86px minmax(0, 1fr) 60px; gap: .75rem; align-items: center; margin: .3rem 0; font-size: .8rem; }
+.potential-bar-row .potential-bar-number { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); font-weight: 600; }
+.potential-bar-track { height: 12px; background: var(--muted); }
+.potential-bar-fill { display: block; height: 100%; background: var(--primary); }
+.potential-bar-fill.baseline { background: #9ca3af; }
+.potential-content .potential-note { font-size: .82rem; color: var(--text-muted); line-height: 1.65; }
+.potential-content .data-table thead th { white-space: normal; color: #fff; font-size: .65rem; letter-spacing: .07em; }
+.potential-content .data-table td { vertical-align: top; }
+.potential-content .data-table caption { text-align: left; font-size: .82rem; font-weight: 600; padding-bottom: .7rem; }
+.potential-content .data-table td:first-child { min-width: 155px; }
+.potential-content .potential-number { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.potential-formula { padding: 1rem 1.2rem; margin: 1rem 0; background: var(--muted); font-size: .88rem; overflow-wrap: anywhere; }
+.potential-detail { margin: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.potential-detail summary { cursor: pointer; font-weight: 600; padding: 1rem 0; min-height: 44px; }
+.potential-detail > div { padding-bottom: 1rem; }
+.potential-archive-link { display: inline-flex; align-items: center; min-height: 44px; padding: .65rem 1.1rem; background: var(--primary); color: #fff; border-radius: var(--radius); margin: .2rem 0 1rem; font-size: .84rem; }
+.potential-archive-link:hover { background: var(--primary-dark); color: #fff; }
+.potential-archive { margin-top: 1rem; }
+.potential-example { border-left: 3px solid var(--border); padding-left: 1.1rem; margin: 1.5rem 0; }
+.potential-example h3 { margin-top: 0; }
+.potential-content section { scroll-margin-top: 85px; }
+@media (max-width: 600px) {
+  .potential-content .stat-row { grid-template-columns: 1fr; }
+  .potential-content .stat-card { display: grid; grid-template-columns: 95px 1fr; text-align: left; gap: 0 1rem; align-items: center; }
+  .potential-content .stat-value { grid-row: span 2; font-size: 1.65rem; }
+  .potential-content .stat-label { margin-top: 0; }
+  .potential-content .potential-stat-detail { margin-top: .2rem; }
+  .potential-result-controls button { flex: 1 1 auto; }
+  .potential-bar-row { grid-template-columns: 72px minmax(0, 1fr) 52px; gap: .5rem; }
+  .potential-content .data-table th, .potential-content .data-table td { padding: .65rem .7rem; }
+  .potential-content .data-table td:first-child { min-width: 125px; }
+}

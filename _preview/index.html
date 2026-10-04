@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home · The StatBase</title>
+  <meta name="description" content="Advanced analytics for professional and collegiate sports. NFL, NBA, and NCAA research by Drew Schmidt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+</head>
+<body>
+
+<!-- TOP NAV -->
+<header class="top-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">The StatBase</a>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main">
+      <a href="/" class="nav-home-link active">Home</a>
+      <a href="/projects/" class="nav-projects-btn">Projects</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE CONTENT -->
+<main class="site-main" id="main-content">
+  
+<!-- HERO -->
+<section class="home-hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">The StatBase &mdash; Drew Schmidt</p>
+    <h1>Advanced analytics for professional&nbsp;&amp;&nbsp;collegiate sports.</h1>
+    <p class="hero-sub">Every project starts with a real question and ends with a data-driven answer. Methodology, findings, and honest limitations &mdash; no filler.</p>
+    <a href="/projects/" class="hero-cta">
+      Browse Projects <span class="hero-cta-arrow">&#8594;</span>
+    </a>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="home-stats">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <span class="stat-num blue">9</span>
+      <span class="stat-label-main">Research Projects</span>
+      <span class="stat-label-sub">NFL &middot; NBA &middot; NCAA MBB</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num green">1,069</span>
+      <span class="stat-label-main">Transfer Players Tracked</span>
+      <span class="stat-label-sub">503 Up-Down-Up &middot; 566 D2-to-D1</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-num amber">68.2%</span>
+      <span class="stat-label-main">NBA Prediction Accuracy</span>
+      <span class="stat-label-sub">148 Forward-Tested Games</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="home-about">
+  <div class="about-inner">
+    <p class="about-copy">
+      Original research built from public data — nflverse, ESPN APIs, KenPom, EvanMiya. Each project is independently reproducible and includes full methodology, limitations, and raw findings.
+    </p>
+    <a href="/projects/" class="about-cta">View All Projects &#8594;</a>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "113b9145df3846aaabf7c206d81b4c12"}'></script><!-- End Cloudflare Web Analytics -->
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-brand">The StatBase</span>
+      <span class="footer-tagline">Advanced Sports Analytics</span>
+    </div>
+    <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    var open = links.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!links.contains(e.target) && !toggle.contains(e.target)) {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+
+</body>
+</html>
