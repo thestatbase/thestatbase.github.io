@@ -36,7 +36,7 @@ The Markdown articles intentionally use `markdown="1"` on their article containe
 
 ## This update
 
-- Light portfolio theme with restrained green accents, serif titles, and readable article typography.
+- Light portfolio theme with restrained green accents, familiar Arial/Helvetica typography.
 - All nine projects available from the homepage, with direct WR and RB links and sport filters.
 - Correct Markdown rendering across the seven NBA and NCAA articles.
 - Separate WR and RB pages with published-call results displayed directly. The two additional result tabs, position switch, and chart-extrema disclosure were removed.
