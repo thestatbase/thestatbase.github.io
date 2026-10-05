@@ -1,0 +1,24 @@
+<div data-project-directory>
+  <div class="project-filters" role="group" aria-label="Filter projects by sport" hidden>
+    <button type="button" data-sport-filter="all" aria-pressed="true">All Projects</button>
+    <button type="button" data-sport-filter="nfl" aria-pressed="false">NFL</button>
+    <button type="button" data-sport-filter="nba" aria-pressed="false">NBA</button>
+    <button type="button" data-sport-filter="ncaa-mbb" aria-pressed="false">NCAA Men's Basketball</button>
+  </div>
+  <p class="sr-only" data-project-status role="status" aria-live="polite"></p>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+    <a class="project-card" data-project-sport="{{ project.sport }}" href="{{ project.url | relative_url }}">
+      {% if project.image %}
+      <div class="project-art image {{ project.art_class }}" aria-hidden="true"><img src="{{ '/assets/images/' | append: project.image | relative_url }}" alt="" loading="eager" width="320" height="140"></div>
+      {% else %}
+      <div class="project-art metric {{ project.art_class }}"><span class="project-art-value">{{ project.value | escape }}</span><span class="project-art-label">{{ project.label | escape }}</span></div>
+      {% endif %}
+      <span class="project-category">{{ project.category | escape }}</span>
+      <h3>{{ project.title | escape }}</h3>
+      <p>{{ project.description | escape }}</p>
+      <span class="project-read">Read project <span aria-hidden="true">&#8594;</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

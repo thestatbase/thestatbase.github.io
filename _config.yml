@@ -24,3 +24,5 @@ exclude:
   - README.md
   - .gitignore
   - vendor/
+  - _preview/
+  - .jekyll-cache/

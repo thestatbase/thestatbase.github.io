@@ -1,0 +1,101 @@
+[
+  {
+    "title": "WR Potential Chart",
+    "description": "Fantasy production compared with WOPR, followed by the 2025 year-one results. Published rebound calls improved 10 of 12 times. Methodology, baseline comparisons, and limitations.",
+    "url": "/nfl/wr-potential/",
+    "sport": "nfl",
+    "category": "NFL",
+    "art_class": "nfl",
+    "value": "83.3%",
+    "label": "Most Potential improved",
+    "image": null
+  },
+  {
+    "title": "RB Potential Chart",
+    "description": "Fantasy production compared with carries, targets, and touchdowns. The 2025 results show stronger decline warnings than rebound calls. Includes year-one rates and baseline comparisons.",
+    "url": "/nfl/rb-potential/",
+    "sport": "nfl",
+    "category": "NFL",
+    "art_class": "nfl",
+    "value": "77.8%",
+    "label": "Least Potential declined",
+    "image": null
+  },
+  {
+    "title": "Momentum & Game Outcomes",
+    "description": "AP Research study: can momentum-based statistics predict NBA game outcomes? Two-phase backtesting and forward-testing study using a novel Scoring Run Performance metric. 68.2% accuracy over 148 games.",
+    "url": "/nba/momentum/",
+    "sport": "nba",
+    "category": "NBA",
+    "art_class": "nba",
+    "value": "68.2%",
+    "label": "148 forward-tested games",
+    "image": null
+  },
+  {
+    "title": "Up-Down-Up Transfer Analysis",
+    "description": "503 players, 2020–26. Three-phase path analysis: competitive program → weaker school → return to competitive level. Only 45.3% meet the success threshold. System fit matters nearly as much as player quality.",
+    "url": "/ncaa-mbb/up-down-up-transfers/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "503",
+    "label": "Players tracked",
+    "image": null
+  },
+  {
+    "title": "D2-to-D1 Transfer Analysis",
+    "description": "566 players, 2020–26. The D2-to-D1 jump is harder than assumed; only 17.0% maintain relative production. WS/40 (r = 0.386) is the best single predictor. The profile of a player who translates is identifiable.",
+    "url": "/ncaa-mbb/d2-to-d1-transfers/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "566",
+    "label": "Players tracked",
+    "image": null
+  },
+  {
+    "title": "Translatability Index (TI)",
+    "description": "Full methodology for the 0–100 composite score used across both transfer analyses. Five components: Efficiency, Jump Risk, System Fit, Trajectory, and Volume Appropriateness. Includes an explanation of the paradox in the success-rate-by-tier chart.",
+    "url": "/ncaa-mbb/translatability-index/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "0-100",
+    "label": "Translatability Index",
+    "image": null
+  },
+  {
+    "title": "Momentum & CBB Power Ratings",
+    "description": "MA-NetRtg: a five-source momentum-adjusted power rating blending KenPom AdjEM, EvanMiya head-to-head data, schedule strength, kill shots, and roster quality. 10-fold CV R² = 0.984. Top 75 KenPom teams.",
+    "url": "/ncaa-mbb/momentum-cbb/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "0.984",
+    "label": "10-fold CV R²",
+    "image": "ma-netrtg-formula.png"
+  },
+  {
+    "title": "Archetypes & KenPom Ratings",
+    "description": "Multiple regression analysis of all D1 teams: how strongly does archetype composition of a team’s best players predict KenPom rating? r = 0.72 for best player vs. team KenPom. 2025–26 season.",
+    "url": "/ncaa-mbb/archetypes-kenpom/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "r = 0.72",
+    "label": "Best player vs. team KenPom",
+    "image": "archetype-scores-kenpom-quartile.png"
+  },
+  {
+    "title": "March Madness Trends (2002–2026)",
+    "description": "24 seasons of KenPom data. Seeding patterns, upset rates, conference dominance, ML feature importance (AUC = 0.756), coaching longevity, and the 2026 tournament field outlook.",
+    "url": "/ncaa-mbb/march-madness-trends/",
+    "sport": "ncaa-mbb",
+    "category": "NCAA Men's Basketball",
+    "art_class": "ncaa",
+    "value": "24",
+    "label": "Seasons analyzed",
+    "image": null
+  }
+]

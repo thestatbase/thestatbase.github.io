@@ -1,69 +1,48 @@
-# The StatBase — Jekyll Portfolio
+# The StatBase
 
-Advanced sports analytics portfolio. Built with Jekyll for GitHub Pages.
+Complete Jekyll source for https://thestatbase.github.io.
 
-## Setup Instructions
+## Publish on GitHub Pages
 
-### 1. Prerequisites
+1. Extract this ZIP.
+2. Use the contents of `thestatbase.github.io-main` as the root of the existing repository. Keep the repository's current Pages publishing settings.
+3. Remove any old `nfl/wr-potential.md` and `nfl/rb-potential.md` files. The current versions are `.html` files with the same public URLs; leaving both versions creates duplicate outputs.
+4. Commit the updated files. GitHub Pages builds and publishes the site.
 
-Install Ruby and Bundler if you haven't already:
-- Ruby: https://www.ruby-lang.org/en/downloads/ (use rbenv or RVM on Mac/Linux)
-- Then run: `gem install bundler`
+All nine project URLs are preserved. The homepage and project directory link to every project. JavaScript adds sport filters and the mobile navigation menu; the projects and article results remain readable without JavaScript.
 
-### 2. Local Development
+## Local development
 
-```bash
-# Clone or download this repository, then:
-cd thestatbase
+Install Ruby and Bundler, then run:
+
+```sh
 bundle install
 bundle exec jekyll serve
-# Open http://localhost:4000 in your browser
 ```
 
-### 3. Deploy to GitHub Pages
+Open http://localhost:4000.
 
-1. Create a new repository on GitHub (e.g. `yourusername.github.io` for a user site, or any name for a project site)
-2. Push this folder to that repository:
+## Editing
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOURUSERNAME/YOURREPO.git
-git push -u origin main
-```
+- `_data/projects.json`: project titles, descriptions, and homepage figures.
+- `_includes/project-grid.html`: the shared project directory.
+- `_layouts/default.html`: navigation, metadata, and footer.
+- `assets/css/main.scss`: the site theme.
+- `assets/css/potential.css`: the WR and RB results styling.
+- `assets/js/site.js`: project filters and mobile navigation.
+- `nfl/`, `nba/`, `ncaa-mbb/`: project articles.
 
-3. In your GitHub repository, go to **Settings > Pages**
-4. Under **Source**, select **Deploy from a branch**
-5. Select **main** branch and **/ (root)** folder, then click Save
-6. Your site will be live at `https://YOURUSERNAME.github.io/YOURREPO` within a few minutes
+The Markdown articles intentionally use `markdown="1"` on their article containers so Kramdown parses the headings, paragraphs, and lists correctly. Retain this attribute when editing.
 
-### 4. Custom Domain (Optional)
+## This update
 
-To use a custom domain (e.g. thestatbase.com):
-1. In GitHub Pages settings, enter your custom domain
-2. With your domain registrar, add a CNAME record pointing to `YOURUSERNAME.github.io`
+- Light portfolio theme with restrained green accents, serif titles, and readable article typography.
+- All nine projects available from the homepage, with direct WR and RB links and sport filters.
+- Correct Markdown rendering across the seven NBA and NCAA articles.
+- Separate WR and RB pages with published-call results displayed directly. The two additional result tabs, position switch, and chart-extrema disclosure were removed.
+- Wording changes limited to the requested voice adjustments and punctuation. Existing research figures, formulas, and chart assets are retained; this update does not rerun the statistical analysis.
+- No Sites preview is included.
 
-### 5. Adding or Editing Pages
+## Validation
 
-- All pages are Markdown (.md) or HTML (.html) files in the root or subdirectory folders
-- Each page starts with front matter between `---` lines (title, description, layout)
-- Images go in `assets/images/`
-- CSS is in `assets/css/main.scss`
-
-### File Structure
-
-```
-thestatbase/
-├── _layouts/         # HTML templates
-├── assets/
-│   ├── css/          # Stylesheet (main.scss)
-│   └── images/       # Charts and images
-├── nfl/              # NFL pages
-├── nba/              # NBA pages
-├── ncaa-mbb/         # NCAA MBB pages
-├── index.html        # Home page
-├── projects.html     # All projects index
-├── _config.yml       # Jekyll configuration
-└── Gemfile           # Ruby dependencies
-```
+Built with Jekyll 3.10.0 and Kramdown 2.4.0. All 11 pages were checked in a real browser at 1366, 390, and 320 pixel widths. Checks covered heading rendering, horizontal overflow, images, internal links, contents links, project filters, mobile navigation, and readable no-JavaScript fallbacks. Original research figures and the retained WR/RB result tables were checked against the previous source.

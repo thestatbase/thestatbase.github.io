@@ -3,46 +3,31 @@ layout: default
 title: Home
 ---
 
-<!-- HERO -->
-<section class="home-hero">
+<section class="home-hero" aria-labelledby="home-title">
   <div class="hero-inner">
-    <p class="hero-eyebrow">The StatBase &mdash; Drew Schmidt</p>
-    <h1>Advanced analytics for professional&nbsp;&amp;&nbsp;collegiate sports.</h1>
-    <p class="hero-sub">Every project starts with a real question and ends with a data-driven answer. Methodology, findings, and honest limitations &mdash; no filler.</p>
-    <a href="{{ '/projects/' | relative_url }}" class="hero-cta">
-      Browse Projects <span class="hero-cta-arrow">&#8594;</span>
-    </a>
-  </div>
-</section>
-
-<!-- STAT STRIP -->
-<section class="home-stats">
-  <div class="stats-inner">
-    <div class="stat-block">
-      <span class="stat-num blue">9</span>
-      <span class="stat-label-main">Research Projects</span>
-      <span class="stat-label-sub">NFL &middot; NBA &middot; NCAA MBB</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-num green">1,069</span>
-      <span class="stat-label-main">Transfer Players Tracked</span>
-      <span class="stat-label-sub">503 Up-Down-Up &middot; 566 D2-to-D1</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-num amber">68.2%</span>
-      <span class="stat-label-main">NBA Prediction Accuracy</span>
-      <span class="stat-label-sub">148 Forward-Tested Games</span>
+    <p class="hero-eyebrow">The StatBase &middot; Drew Schmidt</p>
+    <h1 id="home-title">Advanced analytics for professional &amp; collegiate sports.</h1>
+    <p class="hero-sub">Every project starts with a question about the game. I use data to study it, then explain the methodology, findings, and limitations.</p>
+    <div class="hero-actions">
+      <a href="#research" class="hero-cta">Browse Projects <span aria-hidden="true">&#8594;</span></a>
+      <a href="{{ '/nfl/wr-potential/' | relative_url }}" class="secondary-cta">WR Potential Chart</a>
+      <a href="{{ '/nfl/rb-potential/' | relative_url }}" class="secondary-cta">RB Potential Chart</a>
     </div>
   </div>
+  <aside class="home-stats" aria-label="Research overview">
+    <div class="stat-block"><span class="stat-num">9</span><span class="stat-label-main">Research Projects</span><span class="stat-label-sub">NFL &middot; NBA &middot; NCAA MBB</span></div>
+    <div class="stat-block"><span class="stat-num">1,069</span><span class="stat-label-main">Transfer Players Tracked</span><span class="stat-label-sub">503 Up-Down-Up &middot; 566 D2-to-D1</span></div>
+    <div class="stat-block"><span class="stat-num">68.2%</span><span class="stat-label-main">NBA Prediction Accuracy</span><span class="stat-label-sub">148 Forward-Tested Games</span></div>
+  </aside>
 </section>
-
-<!-- ABOUT STRIP -->
+<section class="home-projects" id="research" aria-labelledby="research-title">
+  <div class="section-heading"><h2 id="research-title">Projects</h2><a href="{{ '/projects/' | relative_url }}">View All Projects &#8594;</a></div>
+  {% include project-grid.html %}
+</section>
 <section class="home-about">
   <div class="about-inner">
-    <p class="about-copy">
-      Original research built from public data — nflverse, ESPN APIs, KenPom, EvanMiya. Each project is independently reproducible and includes full methodology, limitations, and raw findings.
-    </p>
+    <p class="about-copy">This portfolio contains original research built from public data, including nflverse, ESPN APIs, KenPom, and EvanMiya. Each project is independently reproducible and includes the methodology, limitations, and raw findings.</p>
     <a href="{{ '/projects/' | relative_url }}" class="about-cta">View All Projects &#8594;</a>
-    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "113b9145df3846aaabf7c206d81b4c12"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"113b9145df3846aaabf7c206d81b4c12"}'></script><!-- End Cloudflare Web Analytics -->
   </div>
 </section>

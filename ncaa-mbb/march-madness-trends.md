@@ -14,7 +14,7 @@ description: An in-depth data science study of NCAA D1 Men's Basketball using Ke
   <div class="page-meta">24 Seasons &middot; 364 Teams Analyzed &middot; 1,535 Tournament Appearances &middot; Based on KenPom Metrics</div>
 </div>
 
-<div class="page-content">
+<article class="page-content" markdown="1">
 
 <div class="stat-row">
   <div class="stat-card">
@@ -35,11 +35,13 @@ description: An in-depth data science study of NCAA D1 Men's Basketball using Ke
   </div>
 </div>
 
-## Project Overview
+<details class="article-toc"><summary>On this page</summary><nav aria-label="On this page"><a href="#project-overview">Project Overview</a><a href="#seeding-analysis-and-upset-patterns">Seeding Analysis and Upset Patterns</a><a href="#kenpom-metric-profiles-by-tournament-round">KenPom Metric Profiles by Tournament Round</a><a href="#offensive-versus-defensive-fingerprints-of-champions">Offensive versus Defensive Fingerprints of Champions</a><a href="#champion-and-final-four-metric-trends-over-time">Champion and Final Four Metric Trends Over Time</a><a href="#conference-dominance">Conference Dominance</a><a href="#era-comparisons-how-the-formula-for-success-has-changed">Era Comparisons: How the Formula for Success Has Changed</a><a href="#machine-learning-feature-importance-for-final-four-prediction">Machine Learning Feature Importance for Final Four Prediction</a><a href="#coaching-longevity-and-march-madness-success">Coaching Longevity and March Madness Success</a><a href="#outlook-2026">2026 Tournament Field Outlook</a></nav></details>
+
+## Project Overview {#project-overview}
 
 This project examines 24 seasons of NCAA D1 Men's Basketball tournament data, from 2002 through 2026, using KenPom metrics to identify patterns in seeding, team construction, conference dominance, coaching success, and the statistical fingerprint of teams that advance deep into March Madness. The goal is not to describe individual tournaments but to identify the patterns that hold across a large sample and to apply those patterns to the 2026 tournament field.
 
-## Seeding Analysis and Upset Patterns
+## Seeding Analysis and Upset Patterns {#seeding-analysis-and-upset-patterns}
 
 1-seeds have reached the Final Four at a 34.8% rate all-time, which is the highest of any seed but also lower than many people assume. That rate has declined slightly in recent eras, dropping to 25.0% over the past five years, suggesting that the quality gap between top seeds and the rest of the field has narrowed somewhat as player development and recruiting have become more nationally distributed. The average Final Four seed per year has been 3.3 all-time, with significant variance in individual years: the most upset-heavy tournaments have produced average Final Four seeds above 5.0, while the most chalk-heavy have produced averages at or below 2.0.
 
@@ -47,19 +49,19 @@ This project examines 24 seasons of NCAA D1 Men's Basketball tournament data, fr
 
 The seed versus deepest-round-reached matrix confirms how sharply success rates fall after the top four seeds. Of the 60 1-seed first-round or second-round appearances in the dataset, 9 reached the Final Four, 8 reached the championship game, and 15 won the national championship. By the 5-seed row, Final Four appearances number 4 and championship appearances drop to 3, with zero titles.
 
-## KenPom Metric Profiles by Tournament Round
+## KenPom Metric Profiles by Tournament Round {#kenpom-metric-profiles-by-tournament-round}
 
 Adjusted Efficiency Margin increases consistently from teams that exit in the first two rounds through those that reach the Final Four and championship game, which is expected. More informative is how the specific components of AdjEM differ by round. Adjusted Offensive Efficiency shows a clear upward trend from R1/R2 teams to champions, while Adjusted Defensive Efficiency (where lower is better) shows the opposite, declining from R1/R2 teams to champions, meaning champions are both more efficient offensively and more stingy defensively than the average team that reaches the early rounds.
 
 Turnover rate decreases consistently as teams advance, which reflects that championship-caliber programs take care of the ball better than programs that exit early. This finding is consistent across every era in the dataset and has not changed meaningfully over time, making it one of the more stable predictive signals in college basketball.
 
-## Offensive versus Defensive Fingerprints of Champions
+## Offensive versus Defensive Fingerprints of Champions {#offensive-versus-defensive-fingerprints-of-champions}
 
 When offensive efficiency (higher is better) is plotted against defensive efficiency (lower is better) for all tournament teams across 24 seasons, champions cluster in the upper-left quadrant of the space, meaning they combine high offensive output with elite defensive efficiency. Runner-ups and other Final Four teams also cluster in that region but with more scatter, and first and second round exits are spread across a much wider range, often showing strong offense but weaker defense or vice versa.
 
 The Champion versus Final Four z-score profile, measured against all tournament teams, shows that champions score higher than other Final Four teams on Offensive Efficiency, Effective FG%, and Block%, while showing comparable or slightly weaker marks on Steal Rate. The most consistent separation between champions and other Final Four teams appears on the defensive efficiency axis rather than the offensive one, suggesting that elite defense is a more reliable separator at the Final Four stage than elite offense.
 
-## Champion and Final Four Metric Trends Over Time
+## Champion and Final Four Metric Trends Over Time {#champion-and-final-four-metric-trends-over-time}
 
 Several trends in champion and Final Four team statistics have shifted meaningfully over the 24-season window.
 
@@ -69,7 +71,7 @@ Adjusted Efficiency Margin has trended upward at approximately +0.17 AdjEM point
 
 Team experience, measured as an average years-in-college score, has shown a slow positive trend at +0.02 per year, which is consistent with the narrative that more experienced rosters tend to perform better in the tournament's high-pressure environment.
 
-## Conference Dominance
+## Conference Dominance {#conference-dominance}
 
 The Big Ten (145 appearances), Big East (142), and Big 12 (140) have the three most all-time tournament appearances in this dataset. The ACC (130) and SEC (131) are close behind, with all five of those conferences far ahead of the next group.
 
@@ -77,7 +79,7 @@ When appearances are converted to Final Four rates per tournament game, the ACC 
 
 Championship distribution by conference and five-year period shows the ACC winning 3 titles in the most recent five-year block, the most of any conference in that window. The Big East has shown the most consistent championship production across multiple eras, with titles in three of the five five-year periods in the dataset. The SEC produced two championships between 2005 and 2010 and one between 2010 and 2015, while the Big 12 has a notable concentration of titles in the most recent five-year period.
 
-## Era Comparisons: How the Formula for Success Has Changed
+## Era Comparisons: How the Formula for Success Has Changed {#era-comparisons-how-the-formula-for-success-has-changed}
 
 Comparing the past five years to the past ten and fifteen years reveals that AdjEM for Final Four teams has increased, with the median Final Four team in the past five years having a higher AdjEM than in prior eras. This reflects partly improved data quality and partly genuine increases in the efficiency of elite teams.
 
@@ -85,7 +87,7 @@ The 3-point FG% distribution for Final Four teams in the past five years is shif
 
 Champion experience over time shows a trend of +0.015 per year, which is slow but consistent. The most recent champions have tended to have more experienced rosters on average than champions from ten or fifteen years ago, though there is still substantial variance from year to year.
 
-## Machine Learning Feature Importance for Final Four Prediction
+## Machine Learning Feature Importance for Final Four Prediction {#machine-learning-feature-importance-for-final-four-prediction}
 
 A Random Forest model was trained to predict Final Four appearances using KenPom metrics, and its feature importance scores identify which statistics carry the most predictive weight in a model free from linear assumptions. The model produced a cross-validated AUC of 0.756, which is reasonably strong for a classification problem with this much natural randomness.
 
@@ -93,13 +95,13 @@ Adjusted Efficiency Margin is the single most important feature by a significant
 
 The Final Four rate by AdjEM bucket makes the threshold effect clear: teams with AdjEM between 15 and 20 reach the Final Four at a 1.7% rate, teams between 20 and 25 reach it at a 9.5% rate, teams between 25 and 30 reach it at 22.0%, and teams with AdjEM above 30 reach it at 54.3%. Being above 30 does not guarantee a Final Four appearance, but it describes the population from which most Final Four teams come.
 
-## Coaching Longevity and March Madness Success
+## Coaching Longevity and March Madness Success {#coaching-longevity-and-march-madness-success}
 
 Among coaches with the most Final Four appearances in this dataset, Hubert Davis, Bill Self, and Dan Hurley each have 6 Final Four appearances, with Hurley's coming across 5 championship game appearances and Self's across 2. Tom Izzo is next with 5. This group of coaches also tends to carry the highest average KenPom margins in their tournament appearances, confirming that consistently reaching the Final Four requires both consistent program quality and effective in-tournament performance.
 
 When coaching tenure is plotted against Final Four rate with a trend line, the R² is essentially 0.00, which means that tenure alone does not predict how often a coach reaches the Final Four. Some coaches reach the Final Four frequently in their first few years at a program, and some long-tenured coaches have never reached it. What the data shows more clearly is that the coaches with the highest Final Four rates regardless of tenure, such as Hurley (approximately 37%), Davis (approximately 32%), and Willard (approximately 25%), are operating programs with both strong KenPom averages and effective tournament performance simultaneously.
 
-## 2026 Tournament Field Outlook
+## 2026 Tournament Field Outlook {#outlook-2026}
 
 Duke entered the 2026 tournament as the highest-seeded team by raw AdjEM at +38.90, followed by Michigan (+37.59) and Arizona (+37.66). When the historical champion AdjEM distribution is overlaid on the 2026 1-seed AdjEM values, all four 1-seeds fall within the range that historical champions have occupied, and Duke's raw margin is at the high end of what championship teams have historically posted.
 
@@ -111,4 +113,4 @@ The top teams in the 2026 field, including Duke, Michigan, Arizona, and Florida,
 
 Please note that this analysis is descriptive rather than predictive in the bracket-by-bracket sense. The patterns identified here hold across a 24-season sample and describe the characteristics that historically separate tournament teams that advance from those that exit early. They do not account for specific matchup dynamics, injuries, or single-game variance, which are real factors that this type of season-level analysis cannot fully capture.
 
-</div>
+</article>
