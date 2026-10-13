@@ -2,13 +2,53 @@
   margin-top:0;
 }
 
+.potential-supported { display:flow-root; }
+.potential-support-layout,
+.potential-support-copy { width:100%; max-width:none; min-width:0; }
+.potential-content .potential-support-copy > p,
+.potential-content .potential-support-copy > h3,
+.potential-content section > p { max-width:none; }
+.potential-graphic-details { margin:24px 0 36px; padding:16px 20px; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); }
+.potential-graphic-details summary { cursor:pointer; color:var(--primary); font-size:14px; font-weight:600; }
+.potential-inline-figure { float:none; width:100%; max-width:480px; margin:20px auto 0; }
+.potential-image-dialog { width:min(94vw,960px); max-height:92vh; padding:16px; border:1px solid var(--border); border-radius:var(--radius); overflow:auto; }
+.potential-image-dialog::backdrop { background:rgba(20,28,36,.7); }
+.potential-image-dialog img { display:block; width:100%; height:auto; }
+.potential-image-dialog button { position:sticky; top:0; display:block; margin-left:auto; padding:9px 20px; border:1px solid var(--border); border-radius:5px; background:#fff; color:var(--text); cursor:pointer; }
+
+.potential-season-album { margin-top:48px; }
+.potential-archive-note { margin:32px 0 -24px; font-size:14px; line-height:1.7; }
+.potential-album { border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:var(--surface); }
+.album-toolbar { display:flex; align-items:end; flex-wrap:wrap; gap:12px 20px; padding:18px 20px 12px; }
+.album-toolbar label { display:grid; gap:5px; color:var(--text-muted); font-size:12px; }
+.album-toolbar select,.album-toolbar button { min-height:40px; padding:7px 11px; border:1px solid var(--border); border-radius:5px; color:var(--text); background:#fff; font:inherit; }
+.album-toolbar select:disabled { color:var(--text); opacity:1; cursor:default; }
+.album-toolbar button { font-size:12px; cursor:pointer; }
+.album-toolbar button:disabled { opacity:.45; cursor:default; }
+.album-progression { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.album-progression[hidden] { display:none; }
+.album-progression input { width:140px; accent-color:var(--primary); }
+.potential-content .album-status { margin:0; padding:0 20px 14px; color:var(--text-muted); font-size:12px; }
+.album-frame { display:block; width:100%; border:0; background:#fff; }
+.album-mobile-note { display:none; }
+@media(max-width:680px) {
+  .album-toolbar { padding:14px 12px 10px; gap:12px; }
+  .potential-content .album-status { padding-left:12px; padding-right:12px; }
+  .potential-content .album-mobile-note { display:block; padding:0 12px; margin:0 0 12px; font-size:12px; color:var(--text-muted); }
+}
+
 .potential-content .potential-intro {
   max-width:760px;
 }
 
 .potential-content .stat-row {
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  margin:30px 0 36px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:900px;
+  margin:30px auto 36px;
+}
+
+.potential-content .stat-card {
+  text-align:center;
 }
 
 .potential-stat-detail {
@@ -18,12 +58,25 @@
   margin-top:5px;
 }
 
-.potential-content section {
-  scroll-margin-top:96px;
+.potential-content .potential-stat-group-label {
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  clear:both;
+  margin:-18px 0 0;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:14px;
+  font-weight:600;
+  font-style:italic;
 }
 
-.potential-content section>p {
-  max-width:760px;
+.potential-content .potential-stat-group-label + .potential-supported h2 {
+  margin-top:60px;
+}
+
+.potential-content section {
+  scroll-margin-top:96px;
 }
 
 .potential-legend {
@@ -172,10 +225,7 @@
   .potential-content .stat-card {
     padding:0;
     border-left:0;
-    display:grid;
-    grid-template-columns:94px minmax(0,1fr);
-    gap:2px 15px;
-    align-items:center;
+    display:block;
   }
   .potential-content .stat-value {
     grid-row:span 2;
@@ -200,4 +250,39 @@
   .potential-example {
     padding-left:15px;
   }
+}
+
+
+/* Archive albums use the full available canvas, one selected album at a time. */
+.archive-breadcrumb,.archive-page-header,.archive-content { max-width:1184px; }
+.archive-page-header p { max-width:700px; margin:0; color:var(--text-muted); font-size:16px; line-height:1.75; }
+.archive-controls { display:flex; flex-wrap:wrap; align-items:end; gap:18px 28px; padding-bottom:22px; border-bottom:1px solid var(--border); }
+.archive-season-label { display:grid; gap:6px; font-size:12px; color:var(--text-muted); }
+.archive-season-label select { min-height:46px; padding:10px 36px 10px 13px; border:1px solid var(--border); border-radius:5px; background:#fff; color:var(--text); font:inherit; font-size:14px; cursor:pointer; }
+.archive-position-group { display:flex; flex-wrap:wrap; gap:9px; }
+.archive-position-group button { display:inline-flex; align-items:center; gap:10px; min-height:46px; padding:10px 16px; border:1px solid var(--border); border-radius:5px; background:var(--surface); color:var(--text-muted); font:inherit; font-size:13px; cursor:pointer; }
+.archive-position-group button[aria-pressed="true"] { border-color:var(--primary); background:var(--primary-light); color:var(--primary); }
+.archive-position-group button span { font-size:10px; letter-spacing:.03em; }
+.potential-content .archive-selection-status { margin:18px 0 30px; color:var(--text-muted); font-size:12px; }
+.archive-panel { min-width:0; }
+.archive-panel .potential-season-album { margin-top:0; }
+.archive-panel h2 { margin-top:0; }
+.archive-panel .potential-season-album>p { color:var(--text-muted); font-size:14px; max-width:760px; }
+.potential-content .archive-album-note { margin:18px 0 24px; max-width:760px; color:var(--text-muted); font-size:13px; line-height:1.8; }
+.archive-panel .potential-album { margin-bottom:18px; }
+.archive-flourish-shell { min-width:0; overflow:hidden; padding:16px; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); }
+.archive-flourish-shell iframe { display:block; max-width:100%; width:100%; border:0; }
+.archive-legacy-frame { height:900px; }
+.potential-content .archive-provider-status { font-size:12px; color:var(--text-muted); padding:12px; margin:0; }
+.archive-research-link { padding-top:20px; margin-top:24px; border-top:1px solid var(--border); font-size:13px; }
+.archive-panel+.archive-panel { margin-top:50px; }
+.archive-panel[hidden]+.archive-panel { margin-top:0; }
+@media(max-width:680px) {
+  .archive-controls { align-items:stretch; gap:16px; }
+  .archive-season-label { width:100%; }
+  .archive-position-group { width:100%; }
+  .archive-position-group button { flex:1 1 120px; justify-content:center; padding:10px 9px; font-size:12px; }
+  .archive-flourish-shell { padding:8px; }
+  .archive-legacy-frame { height:760px; }
+  .archive-page-header p { font-size:15px; }
 }

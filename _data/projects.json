@@ -5,10 +5,12 @@
     "url": "/nfl/wr-potential/",
     "sport": "nfl",
     "category": "NFL",
-    "art_class": "nfl",
+    "art_class": "nfl chart-preview",
     "value": "83.3%",
     "label": "Most Potential improved",
-    "image": null
+    "image": "potential-previews/wr-potential-preview.svg",
+    "image_width": 1200,
+    "image_height": 630
   },
   {
     "title": "RB Potential Chart",
@@ -16,10 +18,12 @@
     "url": "/nfl/rb-potential/",
     "sport": "nfl",
     "category": "NFL",
-    "art_class": "nfl",
-    "value": "77.8%",
+    "art_class": "nfl chart-preview",
+    "value": "88.9%",
     "label": "Least Potential declined",
-    "image": null
+    "image": "potential-previews/rb-potential-preview.svg",
+    "image_width": 1200,
+    "image_height": 630
   },
   {
     "title": "Momentum & Game Outcomes",

@@ -1,0 +1,12 @@
+# Local draft preview only. Keep this out of your Pages publishing command.
+show_unpublished_projects: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/
+  - _preview/
+  - .jekyll-cache/
+  - _config.preview.yml
+  - scripts/

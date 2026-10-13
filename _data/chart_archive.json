@@ -1,0 +1,12 @@
+{
+  "seasons": [
+    {"value": "2026", "label": "2026–27", "description": "Current season · growing albums"},
+    {"value": "2025", "label": "2025–26", "description": "Year one · original published charts"}
+  ],
+  "albums": [
+    {"id": "archive-2026-wr", "season": "2026", "label": "2026–27", "position": "WR", "kind": "local", "project_url": "/nfl/wr-potential/"},
+    {"id": "archive-2026-rb", "season": "2026", "label": "2026–27", "position": "RB", "kind": "local", "project_url": "/nfl/rb-potential/"},
+    {"id": "archive-2025-wr", "season": "2025", "label": "2025–26", "position": "WR", "kind": "flourish", "story_id": "3356523", "project_url": "/nfl/wr-potential/"},
+    {"id": "archive-2025-rb", "season": "2025", "label": "2025–26", "position": "RB", "kind": "flourish", "story_id": "3410504", "project_url": "/nfl/rb-potential/"}
+  ]
+}

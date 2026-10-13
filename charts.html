@@ -1,0 +1,46 @@
+---
+layout: default
+title: Potential Chart Archive
+description: "Browse the WR and RB potential chart albums: the original 2025–26 charts and the growing 2026–27 weekly collection."
+permalink: /charts/
+potential_page: true
+chart_archive: true
+---
+
+<div class="breadcrumb archive-breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> <span>/</span> Potential Chart Archive</div>
+<header class="page-header archive-page-header">
+  <div class="page-category">NFL · Potential Charts</div>
+  <h1>Potential Chart Archive</h1>
+  <p>All the WR and RB charts, organized by season. Revisit the original albums or follow the new weekly charts as they are published.</p>
+</header>
+<div class="page-content potential-content archive-content" data-chart-archive>
+  <div class="archive-controls" data-archive-controls hidden>
+    <label class="archive-season-label">Season<select data-archive-season>{% for season in site.data.chart_archive.seasons %}<option value="{{ season.value }}">{{ season.label }}{% if forloop.first %} · Current season{% endif %}</option>{% endfor %}</select></label>
+    <div class="archive-position-group" role="group" aria-label="Choose player position">
+      <button type="button" data-archive-position="WR" aria-pressed="true">Wide receivers <span>WR</span></button>
+      <button type="button" data-archive-position="RB" aria-pressed="false">Running backs <span>RB</span></button>
+    </div>
+  </div>
+  <p class="archive-selection-status" data-archive-status role="status" aria-live="polite">2026–27 · Current season · growing albums</p>
+  <noscript><p class="potential-note">All four albums are shown below. Each heading identifies its season and position.</p></noscript>
+  {% for entry in site.data.chart_archive.albums %}
+  <section class="archive-panel" data-archive-panel data-season="{{ entry.season }}" data-position="{{ entry.position }}" data-kind="{{ entry.kind }}" aria-label="{{ entry.label }} {{ entry.position }} chart album">
+    {% if entry.kind == 'local' %}
+      {% include potential-album.html position=entry.position id=entry.id %}
+      <p class="archive-album-note">This album currently has {% assign position_album = site.data.potential_albums[entry.position] %}{% assign current_season = position_album.seasons | first %}{{ current_season.weeks.size }} published week{% if current_season.weeks.size != 1 %}s{% endif %}. New charts will appear here when they are added to the collection.</p>
+    {% else %}
+      <h2>{{ entry.label }} {{ entry.position }} Potential Chart Album</h2>
+      <p class="archive-album-note">Year one. These are the original published charts, preserved with their weekly selections and annotations. Use the album’s navigation to move between charts.</p>
+      <div class="archive-flourish-shell">
+        <div class="flourish-embed flourish-story" data-src="story/{{ entry.story_id }}" data-archive-flourish>
+          <noscript><iframe class="archive-legacy-frame" src="https://flo.uri.sh/story/{{ entry.story_id }}/embed" title="{{ entry.label }} {{ entry.position }} potential chart album" loading="lazy" allowfullscreen></iframe></noscript>
+        </div>
+        <p class="archive-provider-status" data-provider-status hidden role="status"></p>
+      </div>
+      <p class="archive-album-note"><a href="https://public.flourish.studio/story/{{ entry.story_id }}/" target="_blank" rel="noopener">Open the original {{ entry.position }} album on Flourish &#8599;</a></p>
+    {% endif %}
+    <div class="archive-research-link"><a href="{{ entry.project_url | relative_url }}">Read the {{ entry.position }} methodology and year-one results &#8594;</a></div>
+  </section>
+  {% endfor %}
+  <script type="application/json" data-archive-seasons>{{ site.data.chart_archive.seasons | jsonify }}</script>
+</div>

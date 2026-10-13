@@ -6,19 +6,21 @@
   <title>{% if page.title %}{{ page.title | escape }} · The StatBase{% else %}The StatBase · Advanced Sports Analytics{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}Advanced analytics for professional and collegiate sports. NFL, NBA, and NCAA research by Drew Schmidt.{% endif %}">
   <meta name="theme-color" content="#fafaf7">
-  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/assets/images/statbase-logo.png' | relative_url }}" type="image/png">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% if page.potential_page %}<link rel="stylesheet" href="{{ '/assets/css/potential.css' | relative_url }}">{% endif %}
+  {% if page.potential_page %}<script src="{{ '/assets/js/potential-pages.js' | relative_url }}" defer></script>{% endif %}
+  {% if page.chart_archive %}<script src="{{ '/assets/js/chart-archive.js' | relative_url }}" defer></script>{% endif %}
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="top-nav">
     <div class="nav-inner">
-      <a href="{{ '/' | relative_url }}" class="nav-brand">The StatBase</a>
+      <a href="{{ '/' | relative_url }}" class="nav-brand"><img src="{{ '/assets/images/statbase-logo.png' | relative_url }}" alt="The StatBase"></a>
       <nav class="nav-links" id="navLinks" aria-label="Main">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>Home</a>
-        <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} class="active" aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ '/charts/' | relative_url }}"{% if page.chart_archive %} class="active" aria-current="page"{% endif %}>Potential Chart Archive</a>
         <a href="mailto:dgschmidt00@icloud.com">Contact</a>
       </nav>
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>

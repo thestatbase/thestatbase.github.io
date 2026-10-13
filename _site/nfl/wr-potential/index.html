@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL WR Potential Chart · The StatBase</title>
+  <meta name="description" content="The original WR potential method and its 2025 year-one results, including published selections, baseline comparisons, player examples, and limitations.">
+  <meta name="theme-color" content="#fafaf7">
+  <link rel="icon" href="/assets/images/statbase-logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/potential.css">
+  <script src="/assets/js/potential-pages.js" defer></script>
+  
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="top-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand"><img src="/assets/images/statbase-logo.png" alt="The StatBase"></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/charts/">Potential Chart Archive</a>
+        <a href="mailto:dgschmidt00@icloud.com">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </header>
+  <main class="site-main" id="main-content" tabindex="-1"><div class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/projects/">Projects</a> <span>/</span> WR Potential Chart</div>
+<div class="page-header">
+<div class="potential-header-inner">
+<div class="page-category">NFL · Wide Receivers</div>
+<h1>NFL Wide Receiver Potential Chart</h1>
+<div class="page-meta">2025 regular season · Year-one results · Data: nflverse</div>
+
+</div>
+</div>
+<article class="page-content potential-content">
+<details class="article-toc potential-section-nav"><summary>On this page</summary><nav aria-label="On this page"><a href="#overview">Overview</a><a href="#method">Methodology</a><a href="#results">Year-one results</a><a href="#examples">Individual predictions</a><a href="#limitations">Limitations</a><a href="#season-album">2026–27 album</a></nav></details>
+<section class="potential-intro" id="overview">
+<h2>Project Overview and Goal</h2>
+<p>A receiver can receive a large share of his team's passing opportunities without producing the fantasy points that would typically come with that role. The goal of this project was to identify those differences, then determine if they could be used to predict a change in the player's future production.</p>
+<p>I used linear regression to compare a receiver's opportunity with his fantasy points per game in 1 point-per-reception scoring. Players below the league regression line were given positive potential, while players above it were given negative potential. The theory was that players producing less than their opportunity would suggest may improve, while players producing considerably more may decline.</p>
+<p>Through the first season of forward testing, 2025-26, the model showed promising results, which can be found in the <a href="#results">Year-one Results</a> tab of this article. In the offseason, I worked to improve the volume-based metric that was used for receivers, slightly modifying WOPR to make it a better representation of a player's per-game opportunity.</p>
+</section>
+<div aria-label="Year-one WR quick facts" class="stat-row">
+<div class="stat-card"><span class="stat-value">83.3%</span><span class="stat-label">Most Potential picks improved</span><span class="potential-stat-detail">10 of 12 weekly selections increased their PPR/game.</span></div>
+<div class="stat-card green"><span class="stat-value">91.7%</span><span class="stat-label">Least Potential picks declined</span><span class="potential-stat-detail">11 of 12 weekly selections decreased their PPR/game.</span></div>
+</div>
+<div class="potential-stat-group-label">Year-one Quick Facts</div>
+<section class="potential-supported" id="method">
+<h2>Methodology and Definitions</h2>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<h3>Opportunity and Production</h3>
+<p>WOPR, or Weighted Opportunity Rating, combines a receiver's target share and air-yards share. Target share measures how many of a team's pass attempts are directed toward the receiver. Air-yards share measures how much of the team's intended receiving distance belongs to him. Combining the two provides a way to evaluate the opportunity the receiver has received, rather than relying only on the yards or touchdowns he has produced.</p>
+<div class="potential-formula">WOPR = 1.5 × target share + 0.7 × air-yards share<br/>Chart X Axis = 100 × WOPR × selected week / recorded player games<br/>Chart Y Axis = full-PPR fantasy points / recorded player games</div>
+<h3>Potential and the Regression Line</h3>
+<p>A least-squares regression line describes the relationship between the opportunity index and current scoring among the plotted receivers. Potential is the fitted scoring value minus the player's current scoring average, also known as the negative of the player's residual.</p>
+<div class="potential-formula">Potential = fitted PPR per game - current PPR per game</div>
+<p>For example, a receiver averaging 10 points whose position on the line corresponds to 13 would have +3 potential, meaning there is a gap of 3 points between his current production and his expected production based on the league-average regression line.</p>
+<h3>How the Results Were Evaluated</h3>
+<p>Each eligible chart selection was compared with scoring in the next three scheduled games of the player's cutoff team. A window is one player evaluated from one chart, so the same receiver can appear in several windows. Improvement means the later average exceeded the average at publication; decline means it was lower. Ties do not count as a correct change.</p>
+<p>Appearance-based averages use games with recorded player statistics. Team-game measures also include games without a later player appearance, counting those as zero. Windows without three remaining regular-season games, or without the required same-team follow-up, are excluded from the primary three-game test.</p>
+</div></div>
+</section>
+<section class="potential-supported" id="results">
+<h2>Year-One Results</h2>
+<h3 id="examples">Notable Individual Predictions From the 2025-26 Season</h3>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<div class="potential-example"><h3>A.J. Brown: Most Potential after Week 11</h3><p>Brown averaged 11.30 PPR points per appearance when selected. His later three-game average was 25.40, an increase of 14.10 points. He totalled three Most Potential selections throughout the season, the most of any player.</p></div>
+<div class="potential-example"><h3>Jordan Addison: Least Potential after Week 7</h3><p>Addison's average at the time of selection was 17.43 points, which then sharply declined to 8.83. The decline of 8.60 points followed the direction identified by the chart. This is an example of negative potential correctly preceding a substantial decline.</p></div>
+<div class="potential-example"><h3>Jerry Jeudy: Most Potential after Week 10</h3><p>Jeudy was averaging 7.50 points when selected, but averaged 4.53 in the follow-up, a decline of 2.97. The selection was incorrect despite a positive potential score, and was one of the model's only severe misses of the season.</p></div>
+</div></div>
+<h3>Overall Findings</h3>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<p>The original WR charts were published after Weeks 3 through 16 of the 2025 regular season. I evaluated the selections against the next three scheduled games of each player's team, excluding byes. The following results use average PPR points per recorded appearance unless a team-game measure is specifically stated. This review was completed after the season, using the selections that had already appeared on the published charts. The random player baseline shows how often you’d get the same outcome by picking a player from the chart at random.</p>
+
+<h3 class="potential-result-title">The Published Superlatives</h3>
+<div class="potential-legend"><span><i></i>Published selection</span><span><i class="potential-baseline-key"></i>Random-player baseline</span></div>
+<div class="potential-comparison"><div class="potential-comparison-label"><strong>Most Potential</strong><span>Scoring increased</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:83.3%"></span></div><span class="potential-bar-number">83.3%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:41%"></span></div><span class="potential-bar-number">41.0%</span></div></div>
+<div class="potential-comparison"><div class="potential-comparison-label"><strong>Least Potential</strong><span>Scoring declined</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:91.7%"></span></div><span class="potential-bar-number">91.7%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:54.3%"></span></div><span class="potential-bar-number">54.3%</span></div></div>
+<p>Of the 12 Most Potential selections, six improved by at least 2 PPR points per appearance. Of the 12 Least Potential selections, 11 declined by at least 2 points. The mean changes were +3.39 and -7.09 points, respectively. These windows include repeat selections of the same players.</p>
+</div></div>
+</section>
+<section id="limitations">
+<h2>Conclusions and Limitations</h2>
+<p>The first year of forward testing for the Wide Receiver Potential Chart shows promising results, with most and least potential selections strongly beating out the random player baseline. While misses are somewhat inevitable when running a model for the duration of an 18-week season, the potential charts served as a relatively consistent and strong indicator of wide receiver regressions and improvements.</p>
+<p><strong>It is important to note the following limitations with this project:</strong></p>
+<p>The chart cannot fully account for injuries, changes in quarterback play, or changes in a player's role. The fitted line describes scoring and opportunity from the same period, so a large gap is not proof that the gap will disappear. Furthermore, a correctly predicted decline does not necessarily mean that the receiver stopped being productive: the Least Potential selections still averaged 13.42 later points per appearance. That figure is a large stepdown from the typical performance of selected players, but is still the production of a serviceable fantasy player.</p>
+
+</section>
+<p class="potential-archive-note">Browse all WR and RB seasons in the <a href="/charts/">Potential Chart Archive</a>.</p>
+
+
+
+
+
+<section class="potential-season-album" id="season-album" aria-labelledby="season-album-title">
+  <h2 id="season-album-title">2026–27 WR Potential Chart Album</h2>
+  <p>Browse the available weeks, find a player, and choose which names appear on the chart. New weekly charts will join this album as they are published.</p>
+  <div class="potential-album" data-potential-album data-position="WR">
+    <div class="album-toolbar">
+      <label>Season<select data-album-season disabled><option value="0">2026–27</option></select></label>
+      <label>Week<select data-album-week disabled><option value="0" selected>Week 4</option></select></label>
+      <div class="album-progression" data-album-progression hidden>
+        <button type="button" data-album-prev>Previous</button>
+        <button type="button" data-album-next>Next</button>
+        <button type="button" data-album-play aria-pressed="false">Play</button>
+        <input type="range" data-album-slider min="0" max="0" value="0" aria-label="Browse chart weeks">
+      </div>
+    </div>
+    <p class="album-status" data-album-status role="status" aria-live="polite">Week 4 · 1 chart available</p>
+    <p class="album-mobile-note">Swipe across the chart to see the full plot. Tap a player to add or remove his name.</p>
+    <iframe class="album-frame" data-album-frame src="/assets/charts/2026/StatBase-WR-2026-W4.html?embed=1" title="WR potential chart, 2026–27, Week 4" loading="lazy" height="1000"></iframe>
+    <script type="application/json" data-album-data>{"seasons":[{"label":"2026–27","weeks":[{"week":4,"url":"/assets/charts/2026/StatBase-WR-2026-W4.html"}]}]}</script>
+  </div>
+</section>
+
+</article>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left"><span class="footer-brand">The StatBase</span><span class="footer-tagline">Advanced Sports Analytics</span></div>
+      <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+    </div>
+  </footer>
+</body>
+</html>

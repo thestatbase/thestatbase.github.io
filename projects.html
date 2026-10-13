@@ -1,13 +1,13 @@
 ---
 layout: default
 title: All Projects
-description: All StatBase research projects, sorted by sport. NFL, NBA, and NCAA Men's Basketball.
+description: "Published StatBase research projects: the NFL WR and RB Potential Charts."
 permalink: /projects/
 ---
 <section class="projects-hero">
   <p class="projects-eyebrow">The StatBase</p>
   <h1>All Projects</h1>
-  <p class="projects-hero-sub">NFL &middot; NBA &middot; NCAA Men's Basketball &middot; 9 projects</p>
+  <p class="projects-hero-sub">{% if site.show_unpublished_projects %}All 9 projects · Local draft preview{% else %}NFL &middot; 2 published projects{% endif %}</p>
 </section>
 <section class="project-directory" aria-label="Research projects">
   {% include project-grid.html %}

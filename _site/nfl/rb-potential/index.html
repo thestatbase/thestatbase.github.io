@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL RB Potential Chart · The StatBase</title>
+  <meta name="description" content="The original RB potential method and its 2025 year-one results, including published selections, baseline comparisons, player examples, and limitations.">
+  <meta name="theme-color" content="#fafaf7">
+  <link rel="icon" href="/assets/images/statbase-logo.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/potential.css">
+  <script src="/assets/js/potential-pages.js" defer></script>
+  
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="top-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand"><img src="/assets/images/statbase-logo.png" alt="The StatBase"></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/charts/">Potential Chart Archive</a>
+        <a href="mailto:dgschmidt00@icloud.com">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </header>
+  <main class="site-main" id="main-content" tabindex="-1"><div class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/projects/">Projects</a> <span>/</span> RB Potential Chart</div>
+<div class="page-header">
+<div class="potential-header-inner">
+<div class="page-category">NFL · Running Backs</div>
+<h1>NFL Running Back Potential Chart</h1>
+<div class="page-meta">2025 regular season · Year-one results · Data: nflverse</div>
+
+</div>
+</div>
+<article class="page-content potential-content">
+<details class="article-toc potential-section-nav"><summary>On this page</summary><nav aria-label="On this page"><a href="#overview">Overview</a><a href="#method">Methodology</a><a href="#results">Year-one results</a><a href="#examples">Individual predictions</a><a href="#limitations">Limitations</a><a href="#season-album">2026–27 album</a></nav></details>
+<section class="potential-intro" id="overview">
+<h2>Project Overview and Goal</h2>
+<p>The running back chart applies the same general concept as the receiver chart: compare a player's current fantasy production with the production typically associated with his role, then evaluate whether that difference can identify a future change in scoring. However, running backs receive opportunities differently, requiring a separate index for their involvement in the offense.</p>
+<p>I used a customized volume-based index combining carries, targets, and touchdowns, then compared it with fantasy points per game in 1 point-per-reception scoring. A running back below the regression line received positive potential, while one above it received negative potential. The goal was to determine whether these differences could identify players whose scoring would improve or decline.</p>
+<p>The <a href="#results">first-year results</a> show that the least potential selections were much more successful than the most potential selections, differing from the wide receiver charts where both were equally successful. No changes were made to the methodology over the offseason, though I am searching for a solution to the poor improvement predictability numbers.</p>
+</section>
+<div aria-label="Published RB selection results" class="stat-row">
+<div class="stat-card"><span class="stat-value">22.2%</span><span class="stat-label">Most Potential improved</span><span class="potential-stat-detail">2 of 9 selections</span></div>
+<div class="stat-card green"><span class="stat-value">88.9%</span><span class="stat-label">Least Potential declined</span><span class="potential-stat-detail">8 of 9 selections</span></div>
+</div>
+<div class="potential-stat-group-label">Year-one Quick Facts</div>
+<section class="potential-supported" id="method">
+<h2>Methodology and Definitions</h2>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<h3>The Volume Per Game Index</h3>
+<p>A running back's involvement cannot be evaluated through carries alone, as targets contribute to fantasy scoring through both receptions and receiving yards. The original Volume Per Game Index therefore combined carries and targets with a weighted touchdown term. The formula used for these charts is shown below.</p>
+<div class="potential-formula">Volume Per Game Index (Chart X Axis) = (targets + carries + 4.5 × total touchdowns) / recorded player games<br/>Chart Y Axis = full-PPR fantasy points / recorded player games</div>
+<p>The touchdown term reflects a component of production that is especially important to a running back's fantasy scoring. However, touchdowns also directly contribute to the scoring being plotted on the vertical axis. The index therefore combines opportunity and realized production, rather than measuring workload alone. Air yards are not part of this original formula.</p>
+<h3>Potential and the Regression Line</h3>
+<p>A least-squares line describes the relationship between the index and current scoring among the plotted running backs. Potential is the fitted scoring value minus the player's current scoring average, also known as the negative of the player's residual.</p>
+<div class="potential-formula">Potential = fitted PPR per game - current PPR per game</div>
+<p>For example, a running back averaging 14 points whose index corresponds to 17 on the line would have +3 potential, meaning there is a gap of 3 points between his current production and his expected production based on the league-average regression line.</p>
+<h3>How the Results Were Evaluated</h3>
+<p>Each eligible chart selection was compared with scoring in the next three scheduled games of the player's cutoff team. A window is one player evaluated from one chart, so the same running back can appear in several windows. Improvement means the later average exceeded the average at publication; decline means it was lower. Ties do not count as a correct change.</p>
+<p>Appearance-based averages use games with recorded player statistics. Team-game measures also include games without a later player appearance, counting those as zero. Byes do not count as games, and windows without three remaining regular-season games or the required same-team follow-up are excluded from the primary three-game test.</p>
+</div></div>
+</section>
+<section class="potential-supported" id="results">
+<h2>Year-One Results</h2>
+<h3 id="examples">Notable Individual Predictions From the 2025-26 Season</h3>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<div class="potential-example"><h3>Saquon Barkley: Most Potential after Week 7</h3><p>Barkley averaged 13.49 PPR points per appearance when selected. His later three-game average was 18.83, an increase of approximately 5.35 points using the unrounded values. This was a successful rebound selection, but it was one of only two successful Most Potential windows.</p></div>
+<div class="potential-example"><h3>Quinshon Judkins: Repeated Most Potential Selections</h3><p>Judkins was selected on eight consecutive charts after Weeks 8 through 15. He improved in only one of those follow-up windows, and that improvement was 1.44 points per appearance. The repeated selections had a large impact on the overall rebound result and show that a positive gap can persist without a corresponding increase in scoring.</p></div>
+<div class="potential-example"><h3>Jonathan Taylor: Least Potential after Week 10</h3><p>Taylor was averaging 27.39 points when selected, while his later average was 11.70. His decline of 15.69 points followed the direction identified by the chart.</p></div>
+<div class="potential-example"><h3>Christian McCaffrey: Highest Volume</h3><p>All nine evaluated Highest Volume selections were McCaffrey. He remained in the future scoring top five in each window and averaged 24.43 later points per appearance across those selections. This was a strong result for his season, but the repeated selections do not show that the same outcome would occur across nine different running backs.</p></div>
+</div></div>
+<h3>Overall Findings</h3>
+<div class="potential-support-layout"><div class="potential-support-copy">
+
+<p>The original RB charts were published after Weeks 7 through 16 of the 2025 regular season. I evaluated the selections against the next three scheduled games of each player's team, excluding byes. The following results use average PPR points per recorded appearance unless a team-game measure is specifically stated. This review was completed after the season, using the selections that had already appeared on the published charts. The random player baseline shows how often you’d get the same outcome by picking a player from the chart at random.
+
+</p>
+
+<h3 class="potential-result-title">The Published Superlatives</h3>
+<div class="potential-legend"><span><i></i>Published selection</span><span><i class="potential-baseline-key"></i>Random-player baseline</span></div>
+<div class="potential-comparison"><div class="potential-comparison-label"><strong>Most Potential</strong><span>Scoring increased</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:22.2%"></span></div><span class="potential-bar-number">22.2%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:46.8%"></span></div><span class="potential-bar-number">46.8%</span></div></div>
+<div class="potential-comparison"><div class="potential-comparison-label"><strong>Least Potential</strong><span>Scoring declined</span></div><div class="potential-bar-row"><span>Selection</span><div class="potential-bar-track"><span class="potential-bar-fill" style="width:88.9%"></span></div><span class="potential-bar-number">88.9%</span></div><div class="potential-bar-row"><span>Baseline</span><div class="potential-bar-track"><span class="potential-bar-fill baseline" style="width:53.2%"></span></div><span class="potential-bar-number">53.2%</span></div></div>
+<p>Only one Most Potential selection improved by at least 2 PPR points per appearance, while seven Least Potential selections declined by at least 2 points. Mean changes were -1.68 and -7.79 points, respectively. </p>
+</div></div>
+</section>
+<section id="limitations">
+<h2>Conclusions and Limitations</h2>
+<p>The first year provides stronger support for the published decline warnings than for the rebound calls. Through the 2025-26 season, the model did an outstanding job of predicting running back declines. However, the Most Potential selections improved less frequently than their random-player baseline.</p>
+<p><strong>It is important to note the following limitations with this project:</strong></p>
+<p>The index includes touchdowns, and a change in touchdown frequency can affect both the index and scoring. Injuries, changes in the backfield, and changes in offensive role can also alter production in ways the line does not account for. The fitted relationship describes the current dataset; it does not establish that a player's efficiency will return to the league relationship.</p>
+</section>
+<p class="potential-archive-note">Browse all WR and RB seasons in the <a href="/charts/">Potential Chart Archive</a>.</p>
+
+
+
+
+
+<section class="potential-season-album" id="season-album" aria-labelledby="season-album-title">
+  <h2 id="season-album-title">2026–27 RB Potential Chart Album</h2>
+  <p>Browse the available weeks, find a player, and choose which names appear on the chart. New weekly charts will join this album as they are published.</p>
+  <div class="potential-album" data-potential-album data-position="RB">
+    <div class="album-toolbar">
+      <label>Season<select data-album-season disabled><option value="0">2026–27</option></select></label>
+      <label>Week<select data-album-week disabled><option value="0" selected>Week 4</option></select></label>
+      <div class="album-progression" data-album-progression hidden>
+        <button type="button" data-album-prev>Previous</button>
+        <button type="button" data-album-next>Next</button>
+        <button type="button" data-album-play aria-pressed="false">Play</button>
+        <input type="range" data-album-slider min="0" max="0" value="0" aria-label="Browse chart weeks">
+      </div>
+    </div>
+    <p class="album-status" data-album-status role="status" aria-live="polite">Week 4 · 1 chart available</p>
+    <p class="album-mobile-note">Swipe across the chart to see the full plot. Tap a player to add or remove his name.</p>
+    <iframe class="album-frame" data-album-frame src="/assets/charts/2026/StatBase-RB-2026-W4.html?embed=1" title="RB potential chart, 2026–27, Week 4" loading="lazy" height="1000"></iframe>
+    <script type="application/json" data-album-data>{"seasons":[{"label":"2026–27","weeks":[{"week":4,"url":"/assets/charts/2026/StatBase-RB-2026-W4.html"}]}]}</script>
+  </div>
+</section>
+
+</article>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left"><span class="footer-brand">The StatBase</span><span class="footer-tagline">Advanced Sports Analytics</span></div>
+      <a href="mailto:dgschmidt00@icloud.com" class="footer-email">dgschmidt00@icloud.com</a>
+    </div>
+  </footer>
+</body>
+</html>

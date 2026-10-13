@@ -27,6 +27,7 @@
   }
   document.querySelectorAll('[data-project-directory]').forEach(function (directory) {
     var controls = directory.querySelector('.project-filters');
+    if (!controls) return;
     var buttons = directory.querySelectorAll('[data-sport-filter]');
     var cards = directory.querySelectorAll('[data-project-sport]');
     var status = directory.querySelector('[data-project-status]');
@@ -44,6 +45,6 @@
         status.textContent = count + ' ' + (count === 1 ? 'project' : 'projects') + ' shown.';
       });
     });
-    controls.hidden = false;
+    if (controls) controls.hidden = false;
   });
 }());

@@ -1,0 +1,32 @@
+/* Applied before the first paint, so the export toolbar never appears in embeds. */
+html.embed-mode body { background:#fff; color:#242b2b; font-family:Arial,Helvetica,sans-serif; }
+html.embed-mode .toolbar,html.embed-mode #instructions,html.embed-mode #status { display:none!important; }
+html.embed-mode .shell { border:0; max-width:none; overflow-x:auto; overscroll-behavior-x:contain; }
+html.embed-mode .shell svg { width:100%; min-width:0; height:auto; }
+html.embed-mode .below { margin:0; padding:0 24px 20px; max-width:none; color:#5c6766; }
+html.embed-mode #player { border:0; border-top:1px solid #dce1dc; border-radius:0; padding:16px 0; margin:0; font-size:13px; }
+html.embed-mode #warning:empty { display:none; }
+html.embed-mode details { padding:0; margin:0; border:0; border-top:1px solid #dce1dc; border-radius:0; }
+html.embed-mode details:has(#method),html.embed-mode .below>p.note { display:none; }
+html.embed-mode summary { padding:16px 0; min-height:48px; color:#0023ff; font-weight:600; }
+html.embed-mode .embed-player-controls>p { margin:0 0 16px; max-width:680px; }
+html.embed-mode .embed-controls-row { display:flex; flex-wrap:wrap; align-items:end; gap:10px; margin-bottom:14px; }
+html.embed-mode .embed-controls-row label:first-child { flex:1 1 220px; max-width:320px; }
+html.embed-mode .embed-controls-row input[type=search] { width:100%; min-height:42px; }
+html.embed-mode button,html.embed-mode input { border-color:#dce1dc; }
+html.embed-mode button { min-height:42px; }
+html.embed-mode .check { padding:9px 0; min-height:42px; }
+html.embed-mode .embed-csv { margin-bottom:14px; font-size:12px; }
+html.embed-mode .tablewrap { max-height:350px; border:1px solid #dce1dc; border-radius:5px; }
+html.embed-mode table { min-width:660px; font-size:12px; }
+html.embed-mode th { background:#f0f2ed; position:sticky; top:0; z-index:1; white-space:nowrap; }
+html.embed-mode td,html.embed-mode th { padding:11px 10px; }
+html.embed-mode input[type=checkbox] { width:18px; height:18px; accent-color:#0023ff; }
+html.embed-mode :focus-visible { outline:2px solid #9a6b26; outline-offset:3px; }
+html.embed-mode #tooltip { max-width:min(310px,calc(100vw - 12px)); font-size:12px; }
+html.embed-mode [hidden] { display:none!important; }
+@media(max-width:700px) {
+  html.embed-mode .shell svg { width:780px; min-width:780px; }
+  html.embed-mode .below { padding:0 16px 16px; }
+  html.embed-mode .embed-controls-row label:first-child { max-width:none; flex-basis:100%; }
+}

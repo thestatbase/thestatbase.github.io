@@ -1,0 +1,28 @@
+{
+  "WR": {
+    "seasons": [
+      {
+        "label": "2026–27",
+        "weeks": [
+          {
+            "week": 4,
+            "url": "/assets/charts/2026/StatBase-WR-2026-W4.html"
+          }
+        ]
+      }
+    ]
+  },
+  "RB": {
+    "seasons": [
+      {
+        "label": "2026–27",
+        "weeks": [
+          {
+            "week": 4,
+            "url": "/assets/charts/2026/StatBase-RB-2026-W4.html"
+          }
+        ]
+      }
+    ]
+  }
+}

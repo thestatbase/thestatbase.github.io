@@ -1,0 +1,25 @@
+{% assign album = site.data.potential_albums[include.position] %}
+{% assign first_season = album.seasons | first %}
+{% assign album_id = include.id | default: 'season-album' %}
+{% assign album_heading_id = album_id | append: '-title' %}
+{% assign first_chart = first_season.weeks | last %}
+<section class="potential-season-album" id="{{ album_id }}" aria-labelledby="{{ album_heading_id }}">
+  <h2 id="{{ album_heading_id }}">{{ first_season.label }} {{ include.position }} Potential Chart Album</h2>
+  <p>Browse the available weeks, find a player, and choose which names appear on the chart. New weekly charts will join this album as they are published.</p>
+  <div class="potential-album" data-potential-album data-position="{{ include.position }}">
+    <div class="album-toolbar">
+      <label>Season<select data-album-season{% if album.seasons.size == 1 %} disabled{% endif %}>{% for season in album.seasons %}<option value="{{ forloop.index0 }}">{{ season.label }}</option>{% endfor %}</select></label>
+      <label>Week<select data-album-week{% if first_season.weeks.size == 1 %} disabled{% endif %}>{% for chart in first_season.weeks %}<option value="{{ forloop.index0 }}"{% if forloop.last %} selected{% endif %}>Week {{ chart.week }}</option>{% endfor %}</select></label>
+      <div class="album-progression" data-album-progression{% if first_season.weeks.size < 2 %} hidden{% endif %}>
+        <button type="button" data-album-prev>Previous</button>
+        <button type="button" data-album-next>Next</button>
+        <button type="button" data-album-play aria-pressed="false">Play</button>
+        <input type="range" data-album-slider min="0" max="{{ first_season.weeks.size | minus: 1 }}" value="{{ first_season.weeks.size | minus: 1 }}" aria-label="Browse chart weeks">
+      </div>
+    </div>
+    <p class="album-status" data-album-status role="status" aria-live="polite">Week {{ first_chart.week }} · {{ first_season.weeks.size }} chart{% if first_season.weeks.size != 1 %}s{% endif %} available</p>
+    <p class="album-mobile-note">Swipe across the chart to see the full plot. Tap a player to add or remove his name.</p>
+    <iframe class="album-frame" data-album-frame src="{{ first_chart.url | relative_url }}?embed=1" title="{{ include.position }} potential chart, {{ first_season.label }}, Week {{ first_chart.week }}" loading="lazy" height="1000"></iframe>
+    <script type="application/json" data-album-data>{"seasons":[{% for season in album.seasons %}{"label":{{ season.label | jsonify }},"weeks":[{% for chart in season.weeks %}{"week":{{ chart.week }},"url":{{ chart.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+  </div>
+</section>
