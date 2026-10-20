@@ -11,6 +11,10 @@
           {
             "week": 5,
             "url": "/assets/charts/2026/StatBase-WR-2026-W5.html"
+          },
+          {
+            "week": 6,
+            "url": "/assets/charts/2026/StatBase-WR-2026-W6.html"
           }
         ]
       }
