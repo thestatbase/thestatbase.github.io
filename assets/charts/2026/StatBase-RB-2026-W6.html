@@ -97,7 +97,7 @@ if($('arrows').checked)for(const a of s.arrows){const p=points.find(p=>p.id===a.
 const selectedPoints=points.filter(p=>selected.has(p.id));
 for(const p of selectedPoints){const choice=placement([p.short_name],X(p.x),Y(p.y),'15.5px Arial',15.5);if(!choice){hidden.push(p.name);continue}
  if(Math.hypot(choice.x-X(p.x),choice.y-Y(p.y))>65)svg+=`<line x1="${X(p.x)}" y1="${Y(p.y)}" x2="${choice.x}" y2="${choice.y}" stroke="#aaa" stroke-width=".7"/>`;
- svg+=text(choice.x,choice.y+5.5,p.short_name,`data-label="${esc(p.id)}" text-anchor="middle" font-size="15.5" fill="${color(p[s.color_key],s.color_max,pos)}" opacity=".9`);
+ svg+=text(choice.x,choice.y+5.5,p.short_name,`data-label="${esc(p.id)}" text-anchor="middle" font-size="15.5" fill="${color(p[s.color_key],s.color_max,pos)}" opacity=".9"`);
 }
 svg+='</g>'+boxCaptions;
 svg+=text((L+R)/2,902,s.xlabel,'text-anchor="middle" font-size="16" font-weight="700" fill="#555"');
