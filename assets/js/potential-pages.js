@@ -30,6 +30,7 @@
     function controls() {
       var season = seasons[seasonIndex];
       var chart = season.weeks[index];
+      var displayWeek = Number(chart.week) + 1;
       weekInput.value = String(index);
       weekInput.disabled = season.weeks.length < 2;
       progression.hidden = season.weeks.length < 2;
@@ -37,9 +38,9 @@
       next.disabled = index === season.weeks.length - 1;
       slider.max = String(season.weeks.length - 1);
       slider.value = String(index);
-      slider.setAttribute('aria-valuetext', 'Week ' + chart.week);
-      frame.title = position + ' potential chart, ' + season.label + ', Week ' + chart.week;
-      status.textContent = 'Week ' + chart.week + ' · ' + season.weeks.length + ' chart' + (season.weeks.length === 1 ? '' : 's') + ' available';
+      slider.setAttribute('aria-valuetext', 'Week ' + displayWeek);
+      frame.title = position + ' potential chart, ' + season.label + ', Week ' + displayWeek;
+      status.textContent = 'Week ' + displayWeek + ' · ' + season.weeks.length + ' chart' + (season.weeks.length === 1 ? '' : 's') + ' available';
     }
     function sendConfig(restore) {
       if (!frame.contentWindow || !frameReady) return;
@@ -86,7 +87,7 @@
       seasonIndex = Number(seasonInput.value);
       weekInput.replaceChildren();
       seasons[seasonIndex].weeks.forEach(function (chart, i) {
-        var option = document.createElement('option'); option.value = String(i); option.textContent = 'Week ' + chart.week; weekInput.appendChild(option);
+        var option = document.createElement('option'); option.value = String(i); option.textContent = 'Week ' + (Number(chart.week) + 1); weekInput.appendChild(option);
       });
       show(seasons[seasonIndex].weeks.length - 1);
     });
