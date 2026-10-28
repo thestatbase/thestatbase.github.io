@@ -2,7 +2,7 @@
   "WR": {
     "seasons": [
       {
-        "label": "2026–27",
+        "label": "2026\u201327",
         "weeks": [
           {
             "week": 4,
@@ -15,6 +15,10 @@
           {
             "week": 6,
             "url": "/assets/charts/2026/StatBase-WR-2026-W6.html"
+          },
+          {
+            "week": 7,
+            "url": "/assets/charts/2026/StatBase-WR-2026-W7.html"
           }
         ]
       }
@@ -23,7 +27,7 @@
   "RB": {
     "seasons": [
       {
-        "label": "2026–27",
+        "label": "2026\u201327",
         "weeks": [
           {
             "week": 4,
@@ -36,6 +40,10 @@
           {
             "week": 6,
             "url": "/assets/charts/2026/StatBase-RB-2026-W6.html"
+          },
+          {
+            "week": 7,
+            "url": "/assets/charts/2026/StatBase-RB-2026-W7.html"
           }
         ]
       }
