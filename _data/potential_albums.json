@@ -48,6 +48,10 @@
           {
             "week": 7,
             "url": "/assets/charts/2026/StatBase-RB-2026-W7.html"
+          },
+          {
+            "week": 8,
+            "url": "/assets/charts/2026/StatBase-RB-2026-W8.html"
           }
         ]
       }
