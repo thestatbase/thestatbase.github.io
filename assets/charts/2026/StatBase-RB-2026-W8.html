@@ -51,7 +51,13 @@ function textWidth(value,font){TEXT_CONTEXT.font=font;return TEXT_CONTEXT.measur
 function fitText(value,width,font){let text=String(value);if(textWidth(text,font)<=width)return text;while(text.length&&textWidth(text+'…',font)>width)text=text.slice(0,-1);return text+'…'}
 function text(x,y,value,attrs=''){return `<text x="${x}" y="${y}" ${attrs}>${esc(value)}</text>`}
 function overlap(a,b){return a.l<b.r&&a.r>b.l&&a.t<b.b&&a.b>b.t}
-function positionFor(key,choice){const saved=labelPositions[$('position').value][key],anchor=saved?.anchor??saved;return anchor?{...choice,x:anchor[0],y:anchor[1]}:choice}
+function positionFor(key,choice){
+ const pos=$('position').value,s=DATA.charts[pos],saved=labelPositions[pos][key],anchor=saved?.anchor??saved;
+ if(!Array.isArray(anchor)||!anchor.every(Number.isFinite))return choice;
+ // Imported positions use plot fractions, with Y measured up from the bottom.
+ const normalized=anchor.every(value=>value>=0&&value<=1);
+ return {...choice,x:normalized?s.L+anchor[0]*(s.R-s.L):anchor[0],y:normalized?s.B-anchor[1]*(s.B-s.T):anchor[1]};
+}
 function render(){
 const pos=$('position').value,s=DATA.charts[pos],search=$('search').value.toLowerCase().trim();$('tooltip').style.display='none';
 if(!s){$('chart').innerHTML=text(600,360,`No ${pos} players meet the games filter.`,'text-anchor="middle" font-size="22" fill="#777"');$('status').textContent='No eligible '+pos+' players.';exportable=false;renderTable(pos);$('method').textContent='No eligible players at this position.';return}
@@ -118,7 +124,10 @@ $('chart').querySelectorAll('circle[data-id]').forEach(dot=>{const p=points.find
    $('chart').dataset.dragHandlers='true';
    $('chart').addEventListener('pointermove',e=>{
      if(!dragging||e.pointerId!==dragging.pointerId)return;
-     dragging.label.setAttribute('transform',`translate(${e.clientX-dragging.x} ${e.clientY-dragging.y})`);
+     const point=$('chart').createSVGPoint(),start=$('chart').createSVGPoint(),inverse=$('chart').getScreenCTM().inverse();
+     point.x=e.clientX;point.y=e.clientY;start.x=dragging.x;start.y=dragging.y;
+     const current=point.matrixTransform(inverse),origin=start.matrixTransform(inverse);
+     dragging.label.setAttribute('transform',`translate(${current.x-origin.x} ${current.y-origin.y})`);
    });
    $('chart').addEventListener('pointerup',e=>{
      if(!dragging||e.pointerId!==dragging.pointerId)return;
@@ -221,3 +230,4 @@ $('warning').textContent=(DATA.warnings||[]).join(' ');render();
 }());
 
 </script><!-- /statbase-embed-script --></body></html>
+
