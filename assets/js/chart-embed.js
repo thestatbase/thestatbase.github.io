@@ -1,8 +1,13 @@
 /* Runs inside weekly chart documents. Standalone exports retain their tools. */
 (function () {
   'use strict';
-  if (!document.documentElement.classList.contains('embed-mode')) return;
   var position = INITIAL.position;
+  var prominent = new Set(DATA.charts[position]?.selected || []);
+  if (location.protocol === 'https:' || location.protocol === 'http:' || document.documentElement.classList.contains('embed-mode')) {
+    selections[position] = new Set(prominent);
+    render();
+  }
+  if (!document.documentElement.classList.contains('embed-mode')) return;
   var controls = document.querySelector('.below details');
   controls.classList.add('embed-player-controls');
   var row = document.createElement('div');
@@ -24,7 +29,10 @@
   var pending = false;
   var configured = false;
   function state() {
-    return {labels: Array.from(selections[position]), search: $('search').value, arrows: $('arrows').checked};
+    var labels = Array.from(selections[position]);
+    // Each week has its own prominent players. Carry only custom selections across weeks.
+    var usingDefault = labels.length === prominent.size && labels.every(function (id) { return prominent.has(id); });
+    return {labels: labels, useProminent: usingDefault, search: $('search').value, arrows: $('arrows').checked};
   }
   function report() {
     if (pending) return;
@@ -47,7 +55,8 @@
     }
     if (config.state) {
       var ids = new Set(DATA.positions[position].map(function (player) { return player.id; }));
-      selections[position] = new Set(config.state.labels.filter(function (id) { return ids.has(id); }));
+      selections[position] = config.state.useProminent ? new Set(prominent) :
+        new Set(config.state.labels.filter(function (id) { return ids.has(id); }));
       $('search').value = config.state.search || '';
       $('arrows').checked = config.state.arrows !== false;
     }
