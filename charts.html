@@ -40,7 +40,7 @@ chart_archive: true
       </div>
       <p class="archive-album-note"><a href="https://public.flourish.studio/story/{{ entry.story_id }}/" target="_blank" rel="noopener">Open the original {{ entry.position }} album on Flourish &#8599;</a></p>
     {% endif %}
-    {% if entry.project_url %}<div class="archive-research-link"><a href="{{ entry.project_url | relative_url }}">Read the {{ entry.position }} methodology and year-one results &#8594;</a></div>{% endif %}
+    {% if entry.project_url %}<div class="archive-research-link"><a href="{{ entry.project_url | relative_url }}">{% if entry.position == 'TE' %}Read the TE project overview and methodology &#8594;{% else %}Read the {{ entry.position }} methodology and year-one results &#8594;{% endif %}</a></div>{% endif %}
   </section>
   {% endfor %}
   <script type="application/json" data-archive-seasons>{{ site.data.chart_archive.seasons | jsonify }}</script>

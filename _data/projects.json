@@ -26,6 +26,17 @@
     "image_height": 630
   },
   {
+    "title": "TE Potential Chart",
+    "description": "Project overview, methodology, definitions, limitations, and the 2026–27 tight end chart album.",
+    "url": "/nfl/te-potential/",
+    "sport": "nfl",
+    "category": "NFL",
+    "art_class": "nfl",
+    "value": "TE",
+    "label": "Opportunity and production",
+    "image": null
+  },
+  {
     "title": "Momentum & Game Outcomes",
     "description": "AP Research study: can momentum-based statistics predict NBA game outcomes? Two-phase backtesting and forward-testing study using a novel Scoring Run Performance metric. 68.2% accuracy over 148 games.",
     "url": "/nba/momentum/",
