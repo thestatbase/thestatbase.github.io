@@ -9,7 +9,8 @@
   var seasons = JSON.parse(archive.querySelector('[data-archive-seasons]').textContent);
   var query = new URLSearchParams(location.search);
   var season = seasons.some(function (item) { return item.value === query.get('season'); }) ? query.get('season') : seasons[0].value;
-  var position = query.get('position') === 'RB' ? 'RB' : 'WR';
+  var positionNames = {WR: 'Wide receivers', RB: 'Running backs', TE: 'Tight ends'};
+  var position = Object.prototype.hasOwnProperty.call(positionNames, query.get('position')) ? query.get('position') : 'WR';
   var flourishPromise;
 
   function flourish() {
@@ -57,7 +58,13 @@
   }
   function show(updateURL) {
     seasonSelect.value = season;
-    buttons.forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.archivePosition === position)); });
+    var available = panels.filter(function (panel) { return panel.dataset.season === season; }).map(function (panel) { return panel.dataset.position; });
+    if (available.indexOf(position) === -1) position = available[0];
+    buttons.forEach(function (button) {
+      button.disabled = available.indexOf(button.dataset.archivePosition) === -1;
+      button.title = button.disabled ? 'No ' + button.dataset.archivePosition + ' charts published for this season yet.' : '';
+      button.setAttribute('aria-pressed', String(button.dataset.archivePosition === position));
+    });
     panels.forEach(function (panel) {
       panel.hidden = panel.dataset.season !== season || panel.dataset.position !== position;
       if (panel.hidden) {
@@ -65,7 +72,7 @@
       } else if (panel.dataset.kind === 'flourish') loadOriginal(panel);
     });
     var info = seasons.find(function (item) { return item.value === season; });
-    status.textContent = info.label + ' · ' + (position === 'WR' ? 'Wide receivers' : 'Running backs') + ' · ' + info.description;
+    status.textContent = info.label + ' · ' + positionNames[position] + ' · ' + info.description;
     if (updateURL) {
       var url = new URL(location.href);
       url.searchParams.set('season', season);

@@ -31,6 +31,10 @@
           {
             "week": 10,
             "url": "/assets/charts/2026/StatBase-WR-2026-W10.html"
+          },
+          {
+            "week": 11,
+            "url": "/assets/charts/2026/StatBase-WR-2026-W11.html"
           }
         ]
       }
@@ -68,6 +72,23 @@
           {
             "week": 10,
             "url": "/assets/charts/2026/StatBase-RB-2026-W10.html"
+          },
+          {
+            "week": 11,
+            "url": "/assets/charts/2026/StatBase-RB-2026-W11.html"
+          }
+        ]
+      }
+    ]
+  },
+  "TE": {
+    "seasons": [
+      {
+        "label": "2026\u201327",
+        "weeks": [
+          {
+            "week": 11,
+            "url": "/assets/charts/2026/StatBase-TE-2026-W11.html"
           }
         ]
       }

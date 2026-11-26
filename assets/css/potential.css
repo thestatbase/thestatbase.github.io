@@ -262,6 +262,7 @@
 .archive-position-group { display:flex; flex-wrap:wrap; gap:9px; }
 .archive-position-group button { display:inline-flex; align-items:center; gap:10px; min-height:46px; padding:10px 16px; border:1px solid var(--border); border-radius:5px; background:var(--surface); color:var(--text-muted); font:inherit; font-size:13px; cursor:pointer; }
 .archive-position-group button[aria-pressed="true"] { border-color:var(--primary); background:var(--primary-light); color:var(--primary); }
+.archive-position-group button:disabled { opacity:.45; cursor:default; }
 .archive-position-group button span { font-size:10px; letter-spacing:.03em; }
 .potential-content .archive-selection-status { margin:18px 0 30px; color:var(--text-muted); font-size:12px; }
 .archive-panel { min-width:0; }
