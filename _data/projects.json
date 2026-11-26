@@ -27,14 +27,16 @@
   },
   {
     "title": "TE Potential Chart",
-    "description": "Project overview, methodology, definitions, limitations, and the 2026–27 tight end chart album.",
+    "description": "Fantasy production compared with WOPR to identify gaps between a tight end's opportunity and scoring. Includes methodology, definitions, limitations, and the 2026–27 weekly charts.",
     "url": "/nfl/te-potential/",
     "sport": "nfl",
     "category": "NFL",
-    "art_class": "nfl",
+    "art_class": "nfl chart-preview",
     "value": "TE",
     "label": "Opportunity and production",
-    "image": null
+    "image": "potential-previews/te-potential-preview.svg",
+    "image_width": 1200,
+    "image_height": 630
   },
   {
     "title": "Momentum & Game Outcomes",
